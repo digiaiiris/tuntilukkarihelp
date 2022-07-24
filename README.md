@@ -11,5 +11,5 @@ To install the extension:
 2. Extract `extension.zip` anywhere on your computer (just a temporary place, can be eg. under Windows `Downloads` folder)
 3. Open chrome://extensions/ url on a Chrome tab
 4. Toggle `Developer mode` ON in the top right corner of the extensions page
-5. Click `Load unpacked` and select the folder where you unzipped the extension
+5. Click `Load unpacked` and select `workday-integration-chrome-plugin` folder from where you unzipped the extension
 
