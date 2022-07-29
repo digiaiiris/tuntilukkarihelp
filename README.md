@@ -168,7 +168,7 @@ The application searches the calendar event text (body description) for the foll
 |Workday: \<project task>, description: \<work description>|The work description can be given after the project task. Work description field must be seperated from the project task with a separator such as comma, dot (.) or a line break.|
 |Workday: \<project task>, comments: \<work description>|Other keywords also supported for work description field: Kommentiksi, Kommentti, Jira ticket, Jira, Comment, Selite, Selitteeksi, Tiketille, Tiketti|
 
-# Tips for Managing your Time at Work
+# Tips for Managing your Time Entries at Work
 
 ## Mark Project Tasks to Calendar Meeting Invitations
 
@@ -184,14 +184,56 @@ The work day may sometime se quite hectic or even filled with total chaos. At th
 
 > Use the slightest opportunities of obvious tasks to record hours to them. Even if you spent 5 minutes on a telephone — if you got a straightforward project task to record it into, use it! You've got 25 minutes extra to engage in other, not so clearly expressable matters of work.
 
-## Use Outlook Calendar Excessively during the Day to Mark your Doings
+## Use Outlook Calendar Excessively during the Day to Keep Track of your Doings
 
 This tip suits only for calendar oriented people whose days are filled with meetings, accompanied with sporadic times of "real work".
+
+> During the day, mark every thing you've been doing to your Outlook calendar as tentative meetings. Let us say you finished with a meeting and had 30 minutes to do some "real work" before the next one. To keep track of your doings, mark that half an hour in your calendar as an event, writing down what you've been doing. At the end of the day, you can use Tuntilukkari to record these events into Workday.
+
+## Include Context Switching in the Work Entries
+
+It takes normal people 23 minutes to orientate yourself when switching from one kind of work to another ([source](https://www.loom.com/blog/cost-of-context-switching)). When your day is full with context switches it is often frustrating to add up the working hours at the end of the day.
+> Even though it may feel like you were not accomplishing much, do not fool yourself to write down less hours than you have been spending.
+
+> Times of context switching should be assigned to the tasks at hand. For example, it is a good practice to record 1,5 hours for a one-hour meeting if it meant you had to orientate yourself either before or after the meeting.
 
 
 # Development Roadmap
 
+## v2
 
-## Jira Integration Configuration
+Workday roles:
+- Workday roles are shown
+- Roles can be selected
+- Roles are suggested based on the work entry history
 
-In the future v4 there will be Jira integration that allows the user to select recent Jira activity as work entry templates. Also, if Jira time tracking is used it will be integrated in a mutual way to further ease work entry recording and to enable overall work hour visibility at Jira side.
+Usability:
+- Today's entries are shown while scrolling a bunch of suggestions
+- Better responsiveness to small screens
+- Helpful hints in the UI pointing to corresponding documentation chapters
+
+Other:
+- Show a warning if an entry has been recorded to a different task than the latest one in the work entry history with a similar work description
+
+## v3
+
+Filtering of calendar events:
+- Calendar event series can be ignored by the user, meaning that they will not be shown up as suggestions also in the future
+- The filtered events can be expanded and examined separately
+
+Usability:
+- Work entry deletion can be undone
+
+## v4
+
+Jira integration:
+- The user can configure unlimited Jira instances to integrate with
+- Magic wand dialog shows recent Jira tickets based on Jira activity (eg. the user has commented on a ticket)
+- Jira time tracking: time tracking marked in Jira tickets is shown up as a suggestion
+- Jira time tracking: work entry hours are recorded as time tracking in Jira tickets
+- Project task is taken from Jira ticket or its epic link
+
+## v5
+
+Internal comments:
+- Work entries have internal comment fields that are shown only to project manager at approval and not printed in the customer invoice
