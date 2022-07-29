@@ -136,9 +136,9 @@ Note that due to Workday constraints, the order of today's entries will not rema
 The application automatically makes suggestions of today's work entries based on Outlook calendar events. You can apply the suggestions as-is and then modify them in today's work entries if needed. Alternatively, you can refine the suggested work entries and apply them one by one.
 
  1. Icon shows the source of the suggestion (currently, only calendar suggestions are supported)
- 2. Work description is either the event subject or parsed from the event text (see below)
+ 2. Work description is either the event subject or parsed from the event text (see [below](#calendar-event-notations-to-enable-automatic-suggestions))
  3. Hours are taken from the event duration
- 4. Project task selection is based on the event text (see below). If the event does not specify the project task, the application suggests project task using the Workday work entry history, searching for a work description that is similar to the event subject.
+ 4. Project task selection is based on the event text (see [below](#calendar-event-notations-to-enable-automatic-suggestions)). If the event does not specify the project task, the application suggests project task using the Workday work entry history, searching for a work description that is similar to the event subject.
  5. Possible warnings are indicated with an icon with a tooltip describing the warning in more detail.
  > The application warns if project task matching accuracy was low, ie. if the project task specified in the event does not match with available project tasks with high accuracy.
 
@@ -152,8 +152,22 @@ The application automatically makes suggestions of today's work entries based on
 
 # Calendar Event Notations to Enable Automatic Suggestions
 
+![Calendar notation screenshot](calendarnotation.png)
+
+The application searches the calendar event text (body description) for the following supported notations that may be used to mark the targeted project task for the event. Also the description text can be given in the event text if the event subject is not appropriate for work entries.
+
+|Example|Notes|
+|--|--|
+|Workday: \<project task>|The separator (color) is optional. Instead of colon, there can also be semicolon (;), equation sign (=) or even line break before the project task |
+|Workday: "\<project task>"| You can surround the project task with single or double quotation marks|
+|WD: \<project task>|Other keywords also supported: Tuntikirjauskohde, Tuntikohde, Hours, Hours to, Task, Tunnit|
+|Workday: \<project task>, description: \<work description>|The work description can be given after the project task. Work description field must be seperated from the project task with a separator such as comma, dot (.) or a line break.|
+|Workday: \<project task>, comments: \<work description>|Other keywords also supported for work description field: Kommentiksi, Kommentti, Jira ticket, Jira, Comment, Selite, Selitteeksi, Tiketille, Tiketti|
+
 
 # Tips for Managing your Time at Work
+
+corporate way of telling project task in events
 
 
 # Development Roadmap
