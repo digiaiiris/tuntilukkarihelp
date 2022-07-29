@@ -65,7 +65,7 @@ In the top bar, three numbers are indicated concerning the hour balances:
 
 With this functionality, you can enter new work entries manually if the suggestions (see below) do not cover all the day's activities.
 
- 1. Magic wand button opens a dialog where you can select recent activity as a tempate for the new work entry (see below for more details).
+ 1. Magic wand button opens a dialog where you can select recent activity as a tempate for the new work entry (see [below](#magic-wand-dialog-using-recent-activity-as-template) for more details).
  2. In the description field, you type in what you've been doing. This will be printed in the invoice sent to the customer, alongside with the project task. Often this is the same as a ticket number (eg. in Jira) or a calendar event subject (in which case you won't enter it manually here but you suggestions further below).
 > Note that you can enter long and multiline text into the description field. After entering a long text, the text input will collapse and you will be indicated by an ellipsis (…) that some part of the text is not visible.
  4. Number of hours you've been working on the subject. The hours can be entered in 0.5 hours (30 minutes) precision.
@@ -76,6 +76,26 @@ The work entry will be saved automatically after you have entered data to all th
 > Pro tip: You can use `Tab` and `Shift+Tab` to move between fields quickly.
 
 One word of caution: If you find yourself usually entering work entries manually to all the fields (description, hours, project task) you should probably either adopt other features of Tuntilukkari as well or change your whole way of organizing your time at work (some more about this further below).
+
+### Magic Wand Dialog (Using Recent Activity as Template)
+
+![Magic wand dialog screenshot](magicwanddialog.png)
+
+The dialog shows recent activity that can be selected as a template for the new work entry.
+
+ 1. You can search recent activity using one or more terms (words or parts of words) that occur in the recent activity. For example, "Design act" matches "PROJ-123 **Design** a new way for users to inter**act** with calibration management".
+ 2. Workday work entries for the last 10 weeks are shown here. The list shows the descriptions of the work entries. A tooltip for each entry shows the latest entry date and the project task used. Selecting a recent Workday work entry preselects work description and project tasks fields, allowing you to type in the hours and move on to the next work entry.
+
+## Project Task Selection
+
+![Project task selection screenshot](projecttaskselection.png)
+
+Project task is selected from a dropdown that shows all the available project tasks for the current user today.
+
+ 1. You can search project tasks using one or more terms (words or parts of words) that occur in the recent activity. For example, "Design act" matches "PROJ-123 **Design** a new way for users to inter**act** with calibration management".
+ 2. Project task is selected from the dropdown list.
+
+> Pro tip: You can move from the search field to the list by hitting `Tab`. Then, you can use arrow keys to navigate and `Enter` to select the item in the list.
 
 
 
