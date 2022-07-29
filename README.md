@@ -95,6 +95,17 @@ The dialog shows recent activity that can be selected as a template for the new 
  1. You can search recent activity using one or more terms (words or parts of words) that occur in the recent activity. For example, "Design act" matches "PROJ-123 **Design** a new way for users to inter**act** with calibration management".
  2. Workday work entries for the last 10 weeks are shown here. The list shows the descriptions of the work entries. A tooltip for each entry shows the latest entry date and the project task used. Selecting a recent Workday work entry preselects work description and project tasks fields, allowing you to type in the hours and move on to the next work entry.
 
+## Project Task Selection
+
+![Project task selection screenshot](projecttaskselection.png)
+
+Project task is selected from a dropdown that shows all the available project tasks for the current user today.
+
+ 1. You can search project tasks using one or more terms (words or parts of words) that occur in the recent activity. For example, "Design act" matches "PROJ-123 **Design** a new way for users to inter**act** with calibration management".
+ 2. Project task is selected from the dropdown list.
+
+> Pro tip: You can move from the search field to the list by hitting `Tab`. Then, you can use arrow keys to navigate and `Enter` to select the item in the list.
+
 ## Today's Work Entries
 
 ![Today's entries screenshot](todaysentries.png)
@@ -107,23 +118,39 @@ The work entries that are so far entered for today are shown in a table.
  4. You can change the project task selection.
  5. You can duplicate the work entry to enter another one. Duplicating copies the hours and project task of the original one, leaving for you to write the description of the work that goes to the same project task.
  6. You can delete the work entry.
- 7. The state of the work entry is indicated. The state can be one of the following: Draft, Saving, Deleting, Saved, and an error.
+ 7. The work entry state can be one of the following:
+	- `Draft` not all the fields are filled up
+	- `Saving` the fields have changed and saving is in progress
+	- `Deleting` the used has deleted the entry and deletion is in progress
+	- `Saved` all the changes have been saved successfully
+	- `Error` there was an error saving or deleting the entry; the error text is shown in detail and you can try saving the entry again by modifying some of the fields
 
 The changes you make to today's entries are saved right away in the background. You can freely continue making modifications to work entries even though there are savings in progress. The application makes sure that all the modifications are taken into account.
 
 Note that due to Workday constraints, the order of today's entries will not remain the same when you reload the page.
 
-## Project Task Selection
+## Suggestions
 
-![Project task selection screenshot](projecttaskselection.png)
+![Suggestions screenshot](suggestions.png)
 
-Project task is selected from a dropdown that shows all the available project tasks for the current user today.
+The application automatically makes suggestions of today's work entries based on Outlook calendar events. You can apply the suggestions as-is and then modify them in today's work entries if needed. Alternatively, you can refine the suggested work entries and apply them one by one.
 
- 1. You can search project tasks using one or more terms (words or parts of words) that occur in the recent activity. For example, "Design act" matches "PROJ-123 **Design** a new way for users to inter**act** with calibration management".
- 2. Project task is selected from the dropdown list.
+ 1. Icon shows the source of the suggestion (currently, only calendar suggestions are supported)
+ 2. Work description is either the event subject or parsed from the event text (see below)
+ 3. Hours are taken from the event duration
+ 4. Project task selection is based on the event text (see below). If the event does not specify the project task, the application suggests project task using the Workday work entry history, searching for a work description that is similar to the event subject.
+ 5. Possible warnings are indicated with an icon with a tooltip describing the warning in more detail.
+ > The application warns if project task matching accuracy was low, ie. if the project task specified in the event does not match with available project tasks with high accuracy.
 
-> Pro tip: You can move from the search field to the list by hitting `Tab`. Then, you can use arrow keys to navigate and `Enter` to select the item in the list.
+> Also, the application warns if the project task parsed from the event does not match the project task used the last time in Workday work entry history with a similar work description.
+ 6. Suggestion state can be one of the following:
+	- `Incomplete` not all the fields are filled up
+	- `Complete` there are user-made changes and the suggestion can be applied
+	- `Autofilled` automatic suggestion can be applied as such
+7. You can apply the suggestion by clicking `Apply` button. The applied entry moves to today's work entries where you can still modify it.
+8. You can apply apply all the complete and autofilled suggestions by clicking `Apply all`button.
 
+# Calendar Event Notations to Enable Automatic Suggestions
 
 
 # Tips for Managing your Time at Work
