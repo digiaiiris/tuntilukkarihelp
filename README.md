@@ -17,6 +17,15 @@ There are multiple ways in which you're helped to record day's work efficiently:
  7. You can easily see all the entries you have recorded for today and modify them if need be.
  8. The hour balance before today is shown alongside with today's total hours and the resulting current balance.
 
+# Glossary of Important Terms
+
+|Terms|Its meaning in this context  |
+|--|--|
+| Work description| In the description field, you type in what you've been doing. This will be printed in the invoice sent to the customer, alongside with the project task. Often this is the same as a ticket number (eg. in Jira) or a calendar event subject (in which case you won't enter it manually here but you suggestions further below). |
+| Hours | Number of hours you've been working on a subject. The hours can be entered in 0.5 hours (30 minutes) precision. |
+| Project task | Project task uniquely identifies the project, phase, and task that a work is targeted to. The project task will determine cost center, billing rate, etc. Project task is represented as `Project > Phase > Task`.
+
+
 # Installation and Configuration
 
 ## Requirements
@@ -66,10 +75,10 @@ In the top bar, three numbers are indicated concerning the hour balances:
 With this functionality, you can enter new work entries manually if the suggestions (see below) do not cover all the day's activities.
 
  1. Magic wand button opens a dialog where you can select recent activity as a tempate for the new work entry (see [below](#magic-wand-dialog-using-recent-activity-as-template) for more details).
- 2. In the description field, you type in what you've been doing. This will be printed in the invoice sent to the customer, alongside with the project task. Often this is the same as a ticket number (eg. in Jira) or a calendar event subject (in which case you won't enter it manually here but you suggestions further below).
+ 2. You can type in the description if you don't use the magic wand button to fill it.
 > Note that you can enter long and multiline text into the description field. After entering a long text, the text input will collapse and you will be indicated by an ellipsis (…) that some part of the text is not visible.
  4. Number of hours you've been working on the subject. The hours can be entered in 0.5 hours (30 minutes) precision.
- 5. Selection of the project task that the work is targeted to (see below for more details on selecting the task). The project task will determine cost center, billing rate, etc.
+ 5. You can select the project task from a dropdown (see [below](#project-task-selection) for more details) if you don't use the magic wand button to fill it.
 
 The work entry will be saved automatically after you have entered data to all the fields. The recorded work entry moves to today's work entries and you may continue to enter another work entry right away.
 
@@ -85,6 +94,24 @@ The dialog shows recent activity that can be selected as a template for the new 
 
  1. You can search recent activity using one or more terms (words or parts of words) that occur in the recent activity. For example, "Design act" matches "PROJ-123 **Design** a new way for users to inter**act** with calibration management".
  2. Workday work entries for the last 10 weeks are shown here. The list shows the descriptions of the work entries. A tooltip for each entry shows the latest entry date and the project task used. Selecting a recent Workday work entry preselects work description and project tasks fields, allowing you to type in the hours and move on to the next work entry.
+
+## Today's Work Entries
+
+![Today's entries screenshot](todaysentries.png)
+
+The work entries that are so far entered for today are shown in a table.
+
+ 1. You can change the work description.
+ 2. Long description texts are indicated with an ellipsis (…)
+ 3. You can change the hours.
+ 4. You can change the project task selection.
+ 5. You can duplicate the work entry to enter another one. Duplicating copies the hours and project task of the original one, leaving for you to write the description of the work that goes to the same project task.
+ 6. You can delete the work entry.
+ 7. The state of the work entry is indicated. The state can be one of the following: Draft, Saving, Deleting, Saved, and an error.
+
+The changes you make to today's entries are saved right away in the background. You can freely continue making modifications to work entries even though there are savings in progress. The application makes sure that all the modifications are taken into account.
+
+Note that due to Workday constraints, the order of today's entries will not remain the same when you reload the page.
 
 ## Project Task Selection
 
