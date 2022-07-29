@@ -150,6 +150,10 @@ The application automatically makes suggestions of today's work entries based on
 7. You can apply the suggestion by clicking `Apply` button. The applied entry moves to today's work entries where you can still modify it.
 8. You can apply apply all the complete and autofilled suggestions by clicking `Apply all`button.
 
+Note that you don't need to apply all the suggestions. Usually, there are such events in your calendar that are irrelevant to the work entry recording.
+
+BTW, private calendar events are automatically filtered out from the suggestions.
+
 # Calendar Event Notations to Enable Automatic Suggestions
 
 ![Calendar notation screenshot](calendarnotation.png)
@@ -164,10 +168,25 @@ The application searches the calendar event text (body description) for the foll
 |Workday: \<project task>, description: \<work description>|The work description can be given after the project task. Work description field must be seperated from the project task with a separator such as comma, dot (.) or a line break.|
 |Workday: \<project task>, comments: \<work description>|Other keywords also supported for work description field: Kommentiksi, Kommentti, Jira ticket, Jira, Comment, Selite, Selitteeksi, Tiketille, Tiketti|
 
-
 # Tips for Managing your Time at Work
 
-corporate way of telling project task in events
+## Mark Project Tasks to Calendar Meeting Invitations
+
+It not unusual to hear complaints after Teams or face-to-face meetings concerning the supposed way of reporting the consumed work hours. `Where I am supposed to record that meeting to in Workday?`
+
+> Launch the practice of marking the supposed work entry information in every meeting invitation you send. Soon others will follow, noting by themselves how advantageous it is. Everyone attended will be able to record their work hours in a similar way, not needing to ponder by themselves over the proper project task target.
+
+Project tasks marked at calendar events also enable Tuntilukkari to make automatic suggestions concerning the time used for events. 
+
+## Use the Slightest Opportunities to Record Tasks unto
+
+The work day may sometime se quite hectic or even filled with total chaos. At the completion of the day, it may be difficult to sort out what you have been doing, and above all, unto which work entries would you divide your day into.
+
+> Use the slightest opportunities of obvious tasks to record hours to them. Even if you spent 5 minutes on a telephone — if you got a straightforward project task to record it into, use it! You've got 25 minutes extra to engage in other, not so clearly expressable matters of work.
+
+## Use Outlook Calendar Excessively during the Day to Mark your Doings
+
+This tip suits only for calendar oriented people whose days are filled with meetings, accompanied with sporadic times of "real work".
 
 
 # Development Roadmap
