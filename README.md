@@ -21,9 +21,9 @@ There are multiple ways in which you're helped to record day's work efficiently:
 
 | Term | Its meaning in this context  |
 |--|--|
-| *Work description* | In the description field, you type in what you've been doing. This will be printed in the invoice sent to the customer, alongside with the project task. Often this is the same as a ticket number (eg. in Jira) or a calendar event subject (in which case you won't enter it manually here but you suggestions further below). |
-| *Hours* | Number of hours you've been working on a subject. The hours can be entered in 0.5 hours (30 minutes) precision. |
-| *Project task* | Project task uniquely identifies the project, phase, and task that a work is targeted to. The project task will determine cost center, billing rate, etc. Project task is represented as `Project > Phase > Task`.
+| **Work description** | In the description field, you type in what you've been doing. This will be printed in the invoice sent to the customer, alongside with the project task. Often this is the same as a ticket number (eg. in Jira) or a calendar event subject (in which case you won't enter it manually here but you suggestions further below). |
+| **Hours** | Number of hours you've been working on a subject. The hours can be entered in 0.5 hours (30 minutes) precision. |
+| **Project task** | Project task uniquely identifies the project, phase, and task that a work is targeted to. The project task will determine cost center, billing rate, etc. Project task is represented as `Project > Phase > Task`.
 
 
 # Installation and Configuration
