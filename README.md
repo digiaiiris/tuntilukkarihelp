@@ -128,8 +128,6 @@ BTW, private calendar events are automatically filtered out from the suggestions
 
 > Pro tip: Ignore such calendar event series that are not recorded as work entries; such as time spent on daily scrum meetings that will be recorded to the actual tasks at hand.
 
-## Ignored Suggestions
-
 ## Entering New Work Entry
 
 ![Enter new entry screenshot](enternewentry.png)
@@ -139,8 +137,8 @@ With this functionality, you can enter new work entries manually if the suggesti
  1. Magic wand button opens a dialog where you can select recent activity as a tempate for the new work entry (see [below](#magic-wand-dialog-using-recent-activity-as-template) for more details).
  2. You can type in the description if you don't use the magic wand button to fill it.
 > Note that you can enter long and multiline text into the description field. After entering a long text, the text input will collapse and you will be indicated by an ellipsis (…) that some part of the text is not visible.
- 4. Number of hours you've been working on the subject. The hours can be entered in 0.5 hours (30 minutes) precision.
- 5. You can select the project task from a dropdown (see [below](#project-task-selection) for more details) if you don't use the magic wand button to fill it.
+ 3. Number of hours you've been working on the subject. The hours can be entered in 0.5 hours (30 minutes) precision.
+ 4. You can select the project task from a dropdown (see [below](#project-task-selection) for more details) if you don't use the magic wand button to fill it.
 
 The work entry will be saved automatically after you have entered data to all the fields. The recorded work entry moves to today's work entries and you may continue to enter another work entry right away.
 
@@ -176,8 +174,6 @@ Project task is selected from a dropdown that shows all the available project ta
 
 The work entries that are so far entered for today are shown in a table.
 
-TBD submitting
-
  1. You can change the work description.
  2. Long description texts are indicated with an ellipsis (…)
  3. You can change the hours.
@@ -194,6 +190,20 @@ TBD submitting
 The changes you make to today's entries are saved right away in the background. You can freely continue making modifications to work entries even though there are savings in progress. The application makes sure that all the modifications are taken into account.
 
 Note that due to Workday constraints, the order of today's entries will not remain the same when you reload the page.
+
+## Submitting Work Entries for Approval
+
+![Submit screenshot](submit.png)
+
+The saved work entries can be submitted either automatically or manually (see setting [above](#user-settings)).
+
+1. Submit status can be one of the following:
+   - `Entries can be submitted` the saved work entries need to be submitted manually
+   - `Submitting` the work entries are being submitted (either automatically or because the user has submitted them)
+   - `Submitting after other operations have completed` the user has changed work entries and their saving is in progress; submit will happen after saving has finished
+   - `All entries have been submitted` today's work entries have been submitted for approval
+   - `Unsubmitted entries from this week` when opening up the application there have been unsubmitted work entries either from today or other days of the week; the user can submit them manually
+2. You can submit all the work entries. Note that this submit also work entries of all other days of this week.
 
 # Calendar Event Notations to Enable Automatic Suggestions
 
