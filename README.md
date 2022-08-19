@@ -70,13 +70,13 @@ In the top bar, three numbers are indicated concerning the hour balances:
 
  1. Total number of hours entered so far for today. This includes entries that are just being saved into Workday. Suggestions are not included.
  2. Hour balance before today, corresponding to the balance shown by `Time Off Balance`report for yesterday
- 3. Current hour balance considering hour balance before today, the required work hours for today's and the total number of hours (1) entered so far. Because of Workday limitations, the current balance cannot be shown if there are no work entries yet for today.
+ 3. Current hour balance considering hour balance before today, the required work hours for today's and the total number of hours entered so far. Because of Workday limitations, the current balance cannot be shown if there are no work entries yet for today.
 
 ## Number of Workday Notifications
 
 ![Workday notifications screenshot](workdaynotifications.png)
 
-In the top bar, the number of unacknowledged Workday notifications and actions waiting in Workday inbox are shown. You can click the icons to go directly no Workday notifications or inbox.
+In the top bar, the number of unacknowledged Workday notifications and actions waiting in Workday inbox are shown. You can click the icons to open Workday notifications or inbox on another browser tab.
 
 ## User Menu
 
@@ -91,11 +91,11 @@ User menu can be accessed from the profile picture on the top right corner.
 
 ![User settings screenshot](usersettings.png)
 
-User settings can be accessed from the profile picture on the top right corner -> Settings.
+User settings can be accessed from the profile picture on the top right corner -> `Settings`.
 
 | Setting | Description |
 | ------- | ----------- |
-| Submit work entries automatically | When selected, the work entries entered by the user are automatically submitted for approval after saving. Note that you can still modify the work entries even if they have been submitted. When unselected, the user must submit the work entries manually using Submit button (see [below](#tbd)). |
+| Submit work entries automatically | When selected, the work entries entered by the user are automatically submitted for approval after saving. Note that you can still modify the work entries even if they have been submitted. When unselected, the user must submit the work entries manually using `Submit` button (see [below](#tbd)). |
 
 ## Suggestions
 
@@ -105,22 +105,24 @@ The application automatically makes suggestions of today's work entries based on
 
 Suggestions can also be ignored. Ignored suggestions are shown in a separate collapsible list. If you ignore a calendar event series the event occurrences will automatically show up as ignored suggestions.
 
- 1. Icon shows the source of the suggestion (currently, only calendar suggestions are supported)
- 2. Work description is either the event subject or parsed from the event text (see [below](#calendar-event-notations-to-enable-automatic-suggestions))
- 3. Hours are taken from the event duration
- 4. Project task selection is based on the event text (see [below](#calendar-event-notations-to-enable-automatic-suggestions)). If the event does not specify the project task, the application suggests project task using the Workday work entry history, searching for a work description that is similar to the event subject.
- 5. Possible warnings are indicated with an icon with a tooltip describing the warning in more detail.
+1. You can apply apply all the complete and autofilled suggestions by clicking `Apply all`button.
+2. Icon shows the source of the suggestion (currently, only calendar suggestions are supported)
+3. Work description is either the event subject or parsed from the event text (see [below](#calendar-event-notations-to-enable-automatic-suggestions))
+4. Hours are taken from the event duration
+5. Project task selection is based on the event text (see [below](#calendar-event-notations-to-enable-automatic-suggestions)). If the event does not specify the project task, the application suggests project task using the Workday work entry history, searching for a work description that is similar to the event subject.
+6. Possible warnings are indicated with an icon with a tooltip describing the warning in more detail.
  > The application warns if project task matching accuracy was low, ie. if the project task specified in the event does not match with available project tasks with high accuracy.
 
 > Also, the application warns if the project task parsed from the event does not match the project task used the last time in Workday work entry history with a similar work description.
- 6. Suggestion state can be one of the following:
+7. Suggestions can be ignored meaning that they will disppear from suggestions list. Ignoring calendar event series will cause the future event occurences be ignored automatically.
+8. Suggestion state can be one of the following:
 	- `Incomplete` not all the fields are filled up
 	- `Complete` there are user-made changes and the suggestion can be applied
 	- `Autofilled` automatic suggestion can be applied as such
-7. You can apply the suggestion by clicking `Apply` button. The applied entry moves to today's work entries where you can still modify it.
-8. You can apply apply all the complete and autofilled suggestions by clicking `Apply all`button.
+9. You can apply the suggestion by clicking `Apply` button. The applied entry moves to today's work entries where you can still modify it.
+10. You can review the ignored suggestions by clicking `Ignored suggestions` list. Ignored suggestions can be restored back to suggestions or applied as work entries.
 
-Note that you don't need to apply all the suggestions. Usually, there are such events in your calendar that are irrelevant to the work entry recording.
+Note that you don't need to apply all the suggestions. Usually, there are such events in your calendar that are irrelevant to the work entry recording. You can either ignore those irrelevant events by clicking ignore icon or just leave them be.
 
 BTW, private calendar events are automatically filtered out from the suggestions.
 
