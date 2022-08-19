@@ -24,7 +24,7 @@ There are multiple ways in which you're helped to record day's work efficiently:
 | **Work description** | In the description field, you type in what you've been doing. This will be printed in the invoice sent to the customer, alongside with the project task. Often this is the same as a ticket number (eg. in Jira) or a calendar event subject (in which case you won't enter it manually here but you suggestions further below). |
 | **Hours** | Number of hours you've been working on a subject. The hours can be entered in 0.5 hours (30 minutes) precision. |
 | **Project task** | Project task uniquely identifies the project, phase, and task that a work is targeted to. The project task will determine cost center, billing rate, etc. Project task is represented as `Project > Phase > Task`. |
-| ** Suggestion** | Suggested work entry for today based on Outlook calendar events. Users can modify suggestions and apply them, converting them to normal work entries |
+| **Suggestion** | Suggested work entry for today based on Outlook calendar events. Users can modify suggestions and apply them, converting them to normal work entries |
 
 # Installation and Configuration
 
@@ -48,7 +48,11 @@ To install the extension:
 
 ## Authentication
 
+![Login view screenshot](loginview.png)
+
 The user will be prompted to authenticate using corporate credentials. Authentication allows the application to access user's calendar and make work entry suggestions based on today's events.
+
+1. Click the login button to be redirected to Microsoft authenticaion used by your company.
 
 ## Workday Window
 
