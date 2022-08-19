@@ -23,8 +23,8 @@ There are multiple ways in which you're helped to record day's work efficiently:
 |--|--|
 | **Work description** | In the description field, you type in what you've been doing. This will be printed in the invoice sent to the customer, alongside with the project task. Often this is the same as a ticket number (eg. in Jira) or a calendar event subject (in which case you won't enter it manually here but you suggestions further below). |
 | **Hours** | Number of hours you've been working on a subject. The hours can be entered in 0.5 hours (30 minutes) precision. |
-| **Project task** | Project task uniquely identifies the project, phase, and task that a work is targeted to. The project task will determine cost center, billing rate, etc. Project task is represented as `Project > Phase > Task`.
-
+| **Project task** | Project task uniquely identifies the project, phase, and task that a work is targeted to. The project task will determine cost center, billing rate, etc. Project task is represented as `Project > Phase > Task`. |
+| ** Suggestion** | Suggested work entry for today based on Outlook calendar events. Users can modify suggestions and apply them, converting them to normal work entries |
 
 # Installation and Configuration
 
@@ -66,9 +66,65 @@ In the top bar, three numbers are indicated concerning the hour balances:
 
  1. Total number of hours entered so far for today. This includes entries that are just being saved into Workday. Suggestions are not included.
  2. Hour balance before today, corresponding to the balance shown by `Time Off Balance`report for yesterday
- 3. Current hour balance considering hour balance before today, the required work hours for today's and the total number of hours (1) entered so far. 
+ 3. Current hour balance considering hour balance before today, the required work hours for today's and the total number of hours (1) entered so far. Because of Workday limitations, the current balance cannot be shown if there are no work entries yet for today.
 
-## Entering new Work Entry
+## Number of Workday Notifications
+
+![Workday notifications screenshot](workdaynotifications.png)
+
+In the top bar, the number of unacknowledged Workday notifications and actions waiting in Workday inbox are shown. You can click the icons to go directly no Workday notifications or inbox.
+
+## User Menu
+
+![Uesr menu screenshot](usermenu.png)
+
+User menu can be accessed from the profile picture on the top right corner.
+
+ 1. Access user settings, see [below](#user-settings)
+ 2. Log out
+
+## User Settings
+
+![User settings screenshot](usersettings.png)
+
+User settings can be accessed from the profile picture on the top right corner -> Settings.
+
+| Setting | Description |
+| ------- | ----------- |
+| Submit work entries automatically | When selected, the work entries entered by the user are automatically submitted for approval after saving. Note that you can still modify the work entries even if they have been submitted. When unselected, the user must submit the work entries manually using Submit button (see [below](#tbd)). |
+
+## Suggestions
+
+![Suggestions screenshot](suggestions.png)
+
+The application automatically makes suggestions of today's work entries based on Outlook calendar events. You can apply the suggestions as-is and then modify them in today's work entries if needed. Alternatively, you can refine the suggested work entries and apply them one by one.
+
+Suggestions can also be ignored. Ignored suggestions are shown in a separate collapsible list. If you ignore a calendar event series the event occurrences will automatically show up as ignored suggestions.
+
+ 1. Icon shows the source of the suggestion (currently, only calendar suggestions are supported)
+ 2. Work description is either the event subject or parsed from the event text (see [below](#calendar-event-notations-to-enable-automatic-suggestions))
+ 3. Hours are taken from the event duration
+ 4. Project task selection is based on the event text (see [below](#calendar-event-notations-to-enable-automatic-suggestions)). If the event does not specify the project task, the application suggests project task using the Workday work entry history, searching for a work description that is similar to the event subject.
+ 5. Possible warnings are indicated with an icon with a tooltip describing the warning in more detail.
+ > The application warns if project task matching accuracy was low, ie. if the project task specified in the event does not match with available project tasks with high accuracy.
+
+> Also, the application warns if the project task parsed from the event does not match the project task used the last time in Workday work entry history with a similar work description.
+ 6. Suggestion state can be one of the following:
+	- `Incomplete` not all the fields are filled up
+	- `Complete` there are user-made changes and the suggestion can be applied
+	- `Autofilled` automatic suggestion can be applied as such
+7. You can apply the suggestion by clicking `Apply` button. The applied entry moves to today's work entries where you can still modify it.
+8. You can apply apply all the complete and autofilled suggestions by clicking `Apply all`button.
+
+Note that you don't need to apply all the suggestions. Usually, there are such events in your calendar that are irrelevant to the work entry recording.
+
+BTW, private calendar events are automatically filtered out from the suggestions.
+
+> Pro tip: Ignore such calendar event series that are not recorded as work entries; such as time spent on daily scrum meetings that will be recorded to the actual tasks at hand.
+
+## Ignored Suggestions
+
+## Entering New Work Entry
 
 ![Enter new entry screenshot](enternewentry.png)
 
@@ -114,6 +170,8 @@ Project task is selected from a dropdown that shows all the available project ta
 
 The work entries that are so far entered for today are shown in a table.
 
+TBD submitting
+
  1. You can change the work description.
  2. Long description texts are indicated with an ellipsis (…)
  3. You can change the hours.
@@ -130,31 +188,6 @@ The work entries that are so far entered for today are shown in a table.
 The changes you make to today's entries are saved right away in the background. You can freely continue making modifications to work entries even though there are savings in progress. The application makes sure that all the modifications are taken into account.
 
 Note that due to Workday constraints, the order of today's entries will not remain the same when you reload the page.
-
-## Suggestions
-
-![Suggestions screenshot](suggestions.png)
-
-The application automatically makes suggestions of today's work entries based on Outlook calendar events. You can apply the suggestions as-is and then modify them in today's work entries if needed. Alternatively, you can refine the suggested work entries and apply them one by one.
-
- 1. Icon shows the source of the suggestion (currently, only calendar suggestions are supported)
- 2. Work description is either the event subject or parsed from the event text (see [below](#calendar-event-notations-to-enable-automatic-suggestions))
- 3. Hours are taken from the event duration
- 4. Project task selection is based on the event text (see [below](#calendar-event-notations-to-enable-automatic-suggestions)). If the event does not specify the project task, the application suggests project task using the Workday work entry history, searching for a work description that is similar to the event subject.
- 5. Possible warnings are indicated with an icon with a tooltip describing the warning in more detail.
- > The application warns if project task matching accuracy was low, ie. if the project task specified in the event does not match with available project tasks with high accuracy.
-
-> Also, the application warns if the project task parsed from the event does not match the project task used the last time in Workday work entry history with a similar work description.
- 6. Suggestion state can be one of the following:
-	- `Incomplete` not all the fields are filled up
-	- `Complete` there are user-made changes and the suggestion can be applied
-	- `Autofilled` automatic suggestion can be applied as such
-7. You can apply the suggestion by clicking `Apply` button. The applied entry moves to today's work entries where you can still modify it.
-8. You can apply apply all the complete and autofilled suggestions by clicking `Apply all`button.
-
-Note that you don't need to apply all the suggestions. Usually, there are such events in your calendar that are irrelevant to the work entry recording.
-
-BTW, private calendar events are automatically filtered out from the suggestions.
 
 # Calendar Event Notations to Enable Automatic Suggestions
 
@@ -202,7 +235,7 @@ It takes normal people 23 minutes to orientate yourself when switching from one 
 
 # Development Roadmap
 
-## v2
+## v3
 
 Workday roles:
 - Workday roles are shown
@@ -210,21 +243,11 @@ Workday roles:
 - Roles are suggested based on the work entry history
 
 Usability:
-- Today's entries are shown while scrolling a bunch of suggestions
-- Better responsiveness to small screens
+- Work entry deletion can be undone
 - Helpful hints in the UI pointing to corresponding documentation chapters
 
 Other:
 - Show a warning if an entry has been recorded to a different task than the latest one in the work entry history with a similar work description
-
-## v3
-
-Filtering of calendar events:
-- Calendar event series can be ignored by the user, meaning that they will not be shown up as suggestions also in the future
-- The filtered events can be expanded and examined separately
-
-Usability:
-- Work entry deletion can be undone
 
 ## v4
 
