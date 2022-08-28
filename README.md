@@ -191,6 +191,15 @@ The changes you make to today's entries are saved right away in the background. 
 
 Note that due to Workday constraints, the order of today's entries will not remain the same when you reload the page.
 
+## Role Selection
+
+![Role selection screenshot](roleselection.png)
+
+Projects may have multiple roles with different billing rates. **Usually roles are not shown** because the user is assigned to a single role in the project.
+
+However, if the user is assigned to multiple roles in a project, the role is shown with its initial letters.
+The role can be changed by selecting the appropriate role from a dropdown menu.
+
 ## Submitting Work Entries for Approval
 
 ![Submit screenshot](submit.png)
