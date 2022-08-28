@@ -198,7 +198,9 @@ Note that due to Workday constraints, the order of today's entries will not rema
 Projects may have multiple roles with different billing rates. **Usually roles are not shown** because the user is assigned to a single role in the project.
 
 However, if the user is assigned to multiple roles in a project, the role is shown with its initial letters.
-The role can be changed by selecting the appropriate role from a dropdown menu.
+
+1. Role can be changed by clicking it and selecting the appropriate role from a dropdown menu.
+2. Work entries do not show a role if the user does not need to select it.
 
 ## Submitting Work Entries for Approval
 
