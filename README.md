@@ -163,8 +163,10 @@ The dialog shows recent activity that can be selected as a template for the new 
 
 Project task is selected from a dropdown that shows all the available project tasks for the current user today.
 
- 1. You can search project tasks using one or more terms (words or parts of words) that occur in the recent activity. For example, "Design act" matches "PROJ-123 **Design** a new way for users to inter**act** with calibration management".
- 2. Project task is selected from the dropdown list.
+ 1. The project task name parsed from the calendar event is shown here (if such was found) as a hint for selecting the correct task.
+ 2. You can search project tasks using one or more terms (words or parts of words) that occur in the recent activity. For example, "Design act" matches "PROJ-123 **Design** a new way for users to inter**act** with calibration management".
+ 3. Project task is selected from the dropdown list.
+ 4. Project task name can be copied to clipboard.
 
 > Pro tip: You can move from the search field to the list by hitting `Tab`. Then, you can use arrow keys to navigate and `Enter` to select the item in the list.
 
