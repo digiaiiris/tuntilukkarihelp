@@ -204,7 +204,7 @@ However, if the user is assigned to multiple roles in a project, the role is sho
 1. Role can be changed by clicking it and selecting the appropriate role from a dropdown menu.
 2. Work entries do not show a role if the user does not need to select it.
 
-Because of Workday limitations, role selection can be changed only after a work entry has been saved to Workday.
+Due to Workday limitations, role selection is shown only after a work entry has been saved to Workday.
 
 ## Submitting Work Entries for Approval
 
