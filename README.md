@@ -163,8 +163,10 @@ The dialog shows recent activity that can be selected as a template for the new 
 
 Project task is selected from a dropdown that shows all the available project tasks for the current user today.
 
- 1. You can search project tasks using one or more terms (words or parts of words) that occur in the recent activity. For example, "Design act" matches "PROJ-123 **Design** a new way for users to inter**act** with calibration management".
- 2. Project task is selected from the dropdown list.
+ 1. The project task name parsed from the calendar event is shown here (if such was found) as a hint for selecting the correct task.
+ 2. You can search project tasks using one or more terms (words or parts of words) that occur in the recent activity. For example, "Design act" matches "PROJ-123 **Design** a new way for users to inter**act** with calibration management".
+ 3. Project task is selected from the dropdown list.
+ 4. Project task name can be copied to clipboard.
 
 > Pro tip: You can move from the search field to the list by hitting `Tab`. Then, you can use arrow keys to navigate and `Enter` to select the item in the list.
 
@@ -190,6 +192,19 @@ The work entries that are so far entered for today are shown in a table.
 The changes you make to today's entries are saved right away in the background. You can freely continue making modifications to work entries even though there are savings in progress. The application makes sure that all the modifications are taken into account.
 
 Note that due to Workday constraints, the order of today's entries will not remain the same when you reload the page.
+
+## Role Selection
+
+![Role selection screenshot](roleselection.png)
+
+Projects may have multiple roles with different billing rates. **Usually roles are not shown** because the user is assigned to a single role in the project.
+
+However, if the user is assigned to multiple roles in a project, the role is shown with its initial letters.
+
+1. Role can be changed by clicking it and selecting the appropriate role from a dropdown menu.
+2. Work entries do not show a role if the user does not need to select it.
+
+Due to Workday limitations, role selection is shown only after a work entry has been saved to Workday.
 
 ## Submitting Work Entries for Approval
 
