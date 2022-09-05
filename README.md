@@ -132,15 +132,18 @@ BTW, private calendar events are automatically filtered out from the suggestions
 
 ![Enter new entry screenshot](enternewentry.png)
 
-With this functionality, you can enter new work entries manually if the suggestions (see below) do not cover all the day's activities.
+With this functionality, you can enter new work entries manually if the suggestions (see above) do not cover all the day's activities.
 
- 1. Magic wand button opens a dialog where you can select recent activity as a tempate for the new work entry (see [below](#magic-wand-dialog-using-recent-activity-as-template) for more details).
- 2. You can type in the description if you don't use the magic wand button to fill it.
+1. Magic wand button opens a dialog where you can select recent activity as a tempate for the new work entry (see [below](#magic-wand-dialog-using-recent-activity-as-template) for more details).
+2. You can type in the description if you don't use the magic wand button to fill it.
 > Note that you can enter long and multiline text into the description field. After entering a long text, the text input will collapse and you will be indicated by an ellipsis (…) that some part of the text is not visible.
- 3. Number of hours you've been working on the subject. The hours can be entered in 0.5 hours (30 minutes) precision.
- 4. You can select the project task from a dropdown (see [below](#project-task-selection) for more details) if you don't use the magic wand button to fill it.
-
-The work entry will be saved automatically after you have entered data to all the fields. The recorded work entry moves to today's work entries and you may continue to enter another work entry right away.
+3. Number of hours you've been working on the subject. The hours can be entered in 0.5 hours (30 minutes) precision.
+4. You can select the project task from a dropdown (see [below](#project-task-selection) for more details) if you don't use the magic wand button to fill it.
+5. You can reset new work entry fields to empty values
+6. State can be one of the following:
+	- `Incomplete` not all the fields are filled up
+	- `Complete` entry is ready to be saved
+7. You can save the new work entry by clicking `Save` button. The entry moves to today's work entries where you can still modify it. 
 
 > Pro tip: You can use `Tab` and `Shift+Tab` to move between fields quickly.
 
@@ -218,7 +221,7 @@ The saved work entries can be submitted either automatically or manually (see se
    - `Submitting after other operations have completed` the user has changed work entries and their saving is in progress; submit will happen after saving has finished
    - `All entries have been submitted` today's work entries have been submitted for approval
    - `Unsubmitted entries from this week` when opening up the application there have been unsubmitted work entries either from today or other days of the week; the user can submit them manually
-2. You can submit all the work entries. Note that this submit also work entries of all other days of this week.
+2. You can submit all the work entries. Note that this submits also work entries of all other days of this week.
 
 # Calendar Event Notations to Enable Automatic Suggestions
 
