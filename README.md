@@ -48,7 +48,7 @@ Install the extension on the following addresses:
 
 1. Download the [extension](https://d2sbbz5gutol4d.cloudfront.net/extension.zip)
 2. Extract `extension.zip` anywhere on your computer (just a temporary place, can be eg. under `Downloads` folder)
-3. Open `edge://extensions` url on a Chrome tab (Three dots on the top right hand corner -> Extensions -> Manage extensions)
+3. Open `edge://extensions` url on a new tab (Three dots on the top right hand corner -> Extensions -> Manage extensions)
 4. Toggle `Developer mode` **on** on the left side of the extensions page
 5. Click `Load unpacked` and select `workday-integration-chrome-plugin` folder from where you unzipped the extension
 
