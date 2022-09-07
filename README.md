@@ -29,21 +29,27 @@ There are multiple ways in which you're helped to record day's work efficiently:
 # Installation and Configuration
 
 ## Requirements
-Tuntilukkari is used with a web browser. The application must be configured every time the user starts it on a new computer (or in incognito window). That is because the application stores user-specific data only in the storage of the user's browser. 
 
-Currently, only Chrome browser is supported. This will change once Workday integration will be possible with another API than the one currently used.
+Tuntilukkari is used with a web browser. The application must be configured every time the user starts it on a new computer (or in incognito window). That is because the application stores user-specific data only in the storage of the user's browser. No data is stored on Tuntilukkari cloud services.
 
-## Chrome Extension Installation
+Currently, only Edge, Chrome and Chromium browsers are supported.
 
-The current Workday integration requires a custom extension installed on Chrome browser.
+## Browser Extension Installation
+
+The current Workday integration requires a custom extension installed on the browser.
 (In the future, integration will be updated to use a different API that does not need extensions.)
 
-To install the extension:
+Install the extension on the following addresses:
+
+- Chrome: https://chrome.google.com/webstore/detail/tuntilukkari-workday-inte/mkpobjdpbnheahockaeenmgkkpcbfjec
+- Chromium: https://chrome.google.com/webstore/detail/tuntilukkari-workday-inte/mkpobjdpbnheahockaeenmgkkpcbfjec
+
+- Edge:
 
 1. Download the [extension](https://d2sbbz5gutol4d.cloudfront.net/extension.zip)
 2. Extract `extension.zip` anywhere on your computer (just a temporary place, can be eg. under `Downloads` folder)
-3. Open `chrome://extensions/` url on a Chrome tab (Three dots on the top right hand corner -> More Tools -> Extensions)
-4. Toggle `Developer mode` **on** in the top right corner of the extensions page
+3. Open `edge://extensions` url on a new tab (Three dots on the top right hand corner -> Extensions -> Manage extensions)
+4. Toggle `Developer mode` **on** on the left side of the extensions page
 5. Click `Load unpacked` and select `workday-integration-chrome-plugin` folder from where you unzipped the extension
 
 ## Authentication
