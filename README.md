@@ -41,10 +41,10 @@ The current Workday integration requires a custom extension installed on the bro
 
 Install the extension on the following addresses:
 
-- Chrome: https://chrome.google.com/webstore/detail/tuntilukkari-workday-inte/mkpobjdpbnheahockaeenmgkkpcbfjec
-- Chromium: https://chrome.google.com/webstore/detail/tuntilukkari-workday-inte/mkpobjdpbnheahockaeenmgkkpcbfjec
+- **Chrome**: [link to the extension on Chrome web store](https://chrome.google.com/webstore/detail/tuntilukkari-workday-inte/mkpobjdpbnheahockaeenmgkkpcbfjec)
+- **Chromium**: [link to the extension on Chrome web store](https://chrome.google.com/webstore/detail/tuntilukkari-workday-inte/mkpobjdpbnheahockaeenmgkkpcbfjec)
 
-- Edge:
+- **Edge**:
 
 1. Download the [extension](https://d2sbbz5gutol4d.cloudfront.net/extension.zip)
 2. Extract `extension.zip` anywhere on your computer (just a temporary place, can be eg. under `Downloads` folder)
