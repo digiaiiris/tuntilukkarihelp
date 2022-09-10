@@ -164,7 +164,9 @@ One word of caution: If you find yourself usually entering work entries manually
 The dialog shows recent activity that can be selected as a template for the new work entry.
 
  1. You can search recent activity using one or more terms (words or parts of words) that occur in the recent activity. For example, "Design act" matches "PROJ-123 **Design** a new way for users to inter**act** with calibration management".
- 2. Workday work entries for the last 10 weeks are shown here. The list shows the descriptions of the work entries. A tooltip for each entry shows the latest entry date and the project task used. Selecting a recent Workday work entry preselects work description and project tasks fields, allowing you to type in the hours and move on to the next work entry.
+ 2. Workday work entries for the last 10 weeks are shown here. The list shows the descriptions of the work entries. A tooltip for each entry shows the latest entry date and the project task used. Selecting a recent Workday work entry preselects work description and project tasks fields, allowing you to type in the hours.
+
+> Pro tip: Pressing `Enter` in hours field saves the new entry.
 
 ## Project Task Selection
 
