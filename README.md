@@ -245,6 +245,38 @@ The application searches the calendar event text (body description) for the foll
 |Workday: \<project task>, description: \<work description>|The work description can be given after the project task. Work description field must be seperated from the project task with a separator such as comma, dot (.) or a line break.|
 |Workday: \<project task>, comments: \<work description>|Other keywords also supported for work description field: Kommentiksi, Kommentti, Jira ticket, Jira, Comment, Selite, Selitteeksi, Tiketille, Tiketti|
 
+# Privacy Policy
+
+## Data Accessed and Stored
+
+Tuntilukkari is integrated with Workday and Outlook 365 services so that it can access the following data:
+- Outlook 365 calendar events
+- Workday work entries
+- Basic information of Workday project tasks that are available to the user
+- User's time-off balance in Workday
+- Number of Workday notifications and actions waiting in the user's inbox
+
+Tuntilukkari does not store any of the above data on its cloud services. The following data is stored by Tuntilukkari on the local storage of the user's browser:
+- User settings
+- Recent work entries cache
+- Available project tasks cache
+
+The data stored on the browser's local storage does not contain personal data of the user.
+
+## Data Protection Rights
+
+All the data stored by Tuntilukkari reside on the personal computer of the user and more specifically on the local storage of the browser used by the browser. Thus, users can manage the data stored by the application by themselves.
+
+Users can access and manage all data stored by Tuntilukkari with the help of browser's tools. With Chrome: three dot menu -> More tools -> Developer tools -> Application -> Local Storage.
+
+## Cookies
+
+The cookies managed by Tuntilukkari do not contain any personal data. Tuntilukkari does not use cookies to track users in any way.
+
+## Contact Details
+
+You can find the contact details of Tuntilukkari support on the footer section of Tuntilukkari user interface.
+
 # Tips for Managing your Time Entries at Work
 
 ## Mark Project Tasks to Calendar Meeting Invitations
