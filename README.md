@@ -261,11 +261,11 @@ Tuntilukkari does not store any of the above data on its cloud services. However
 - Recent work entries cache
 - Available project tasks cache
 
-The above data stored on the browser's local storage does not contain personal data of the user.
+The above data stored on the browser's local storage does not contain any personal data of the user.
 
 ## Data Protection Rights
 
-All the data stored by Tuntilukkari reside on the personal computer of the user and more specifically on the local storage of the browser used by the browser. Thus, users can manage the data stored by the application by themselves.
+All the data stored by Tuntilukkari reside on the computer used by the user and more specifically on the local storage of the browser. Thus, users can manage the data stored by the application by themselves.
 
 Users can access and manage all data stored by Tuntilukkari with the help of browser's tools. With Chrome: three dot menu -> More tools -> Developer tools -> Application -> Local Storage.
 
