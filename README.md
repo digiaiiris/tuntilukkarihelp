@@ -256,12 +256,12 @@ Tuntilukkari is integrated with Workday and Outlook 365 services so that it can 
 - User's time-off balance in Workday
 - Number of Workday notifications and actions waiting in the user's inbox
 
-Tuntilukkari does not store any of the above data on its cloud services. The following data is stored by Tuntilukkari on the local storage of the user's browser:
+Tuntilukkari does not store any of the above data on its cloud services. However, the following data is stored by Tuntilukkari on the **local storage of the user's browser**:
 - User settings
 - Recent work entries cache
 - Available project tasks cache
 
-The data stored on the browser's local storage does not contain personal data of the user.
+The above data stored on the browser's local storage does not contain personal data of the user.
 
 ## Data Protection Rights
 
