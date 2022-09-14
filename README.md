@@ -1,3 +1,6 @@
+* TOC
+{:toc}
+
 # Introduction
 
 Soon you will be enjoying the most efficient way of recording day's work entries into Workday. This tool is designed so that you could spend as little time as possible using it!
