@@ -160,7 +160,7 @@ With this functionality, you can enter new work entries manually if the suggesti
 
 One word of caution: If you find yourself usually entering work entries manually to all the fields (description, hours, project task) you should probably either adopt other features of Tuntilukkari as well or change your whole way of organizing your time at work (some more about this further below).
 
-### Magic Wand Dialog (Using Recent Activity as Template)
+## Magic Wand Dialog (Using Recent Activity as Template)
 
 ![Magic wand dialog screenshot](magicwanddialog.png)
 
@@ -314,19 +314,23 @@ It takes normal people 23 minutes to orientate yourself when switching from one 
 
 ## v3
 
-Workday roles:
-- Workday roles are shown
-- Roles can be selected
-- Roles are suggested based on the work entry history
+Installation:
+- Edge extension can be installed easily from Microsoft Edge Add-ons page
 
 Usability:
+- Hours field should accept also comma as decimal separator
+- User options to save changes manually instead of applying them automatically
 - Work entry deletion can be undone
 - Helpful hints in the UI pointing to corresponding documentation chapters
 
 Other:
-- Show a warning if an entry has been recorded to a different task than the latest one in the work entry history with a similar work description
+- Encrypt cache data on browser's local storage to protect corporate data on shared or home computers
 
 ## v4
+
+Usability:
+- Major rework: Users can enter and submit hours of the whole calendar weeks instead of only today
+- Indicate work entries sent back from approval along with their review comments
 
 Jira integration:
 - The user can configure unlimited Jira instances to integrate with
