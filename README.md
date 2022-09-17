@@ -152,7 +152,7 @@ With this functionality, you can enter new work entries manually if the suggesti
 
 > Pro tip: You can use `Tab` and `Shift+Tab` to move between fields quickly.
 
-> Pro tip 2: You can start typing (ie. searching) project task name immediately after moving focus to the dropdown button with `Tab`. Pressing `Space` on dropdown button opens the task list.
+> Pro tip 2: You can start typing (ie. searching) project task name immediately after moving focus to the dropdown button with `Tab`. You can also press `Space` to open the task list.
 
 One word of caution: If you find yourself usually entering work entries manually to all the fields (description, hours, project task) you should probably either adopt other features of Tuntilukkari as well or change your whole way of organizing your time at work (some more about this further below).
 
