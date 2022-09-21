@@ -315,11 +315,7 @@ It takes normal people 23 minutes to orientate yourself when switching from one 
 
 ## v3
 
-Installation:
-- Edge extension can be installed easily from Microsoft Edge Add-ons page
-
 Usability:
-- Hours field should accept also comma as decimal separator
 - User options to save changes manually instead of applying them automatically
 - Work entry deletion can be undone
 - Helpful hints in the UI pointing to corresponding documentation chapters
