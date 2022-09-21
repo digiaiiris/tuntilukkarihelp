@@ -276,6 +276,11 @@ The cookies managed by Tuntilukkari do not contain any personal data. Tuntilukka
 
 You can find the contact details of Tuntilukkari support on the footer section of Tuntilukkari user interface.
 
+# What to Do if the Application Does Not Work (aka Emergency & Contingency Policy)
+
+1. Don't panic - you can always switch to use Workday to record work entries
+2. If the problem persists, please contact support. You can find the contact details of Tuntilukkari support on the footer section of Tuntilukkari user interface.
+
 # Tips for Managing your Time Entries at Work
 
 ## Mark Project Tasks to Calendar Meeting Invitations
