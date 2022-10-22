@@ -40,16 +40,14 @@ Tuntilukkari is used with a web browser. The application must be configured ever
 
 Currently, only Edge, Chrome and Chromium browsers are supported.
 
-## Browser Extension Installation
+## Setup Process
 
-The current Workday integration requires a custom extension installed on the browser.
-(In the future, integration will be updated to use a different API that does not need extensions.)
+![Setup view screenshot](setupview.png)
 
-Install the extension on the following addresses:
+The user interface guides the user through the initial setup process.
 
-- **Chrome**: [link to the extension on Chrome web store](https://chrome.google.com/webstore/detail/tuntilukkari-workday-inte/mkpobjdpbnheahockaeenmgkkpcbfjec)
-- **Chromium**: [link to the extension on Chrome web store](https://chrome.google.com/webstore/detail/tuntilukkari-workday-inte/mkpobjdpbnheahockaeenmgkkpcbfjec)
-- **Edge**: [link to the extension on Edge web store](https://microsoftedge.microsoft.com/addons/detail/tuntilukkari-workday-inte/igkkjboafmccpodlhjfandoepmbnconl)
+During the setup process, the user is instructed to activate a browser extension. The browser extension enables RPA (Robotic Process Automation)
+techonology which performs operations in Workday user interface in an automated and efficient fashion on user's behalf.
 
 ## Authentication
 
@@ -100,7 +98,8 @@ User settings can be accessed from the profile picture on the top right corner -
 
 | Setting | Description |
 | ------- | ----------- |
-| Submit work entries automatically | When selected, the work entries entered by the user are automatically submitted for approval after saving. Note that you can still modify the work entries even if they have been submitted. When unselected, the user must submit the work entries manually using `Submit` button (see [below](#tbd)). |
+| Submit work entries automatically | When selected, the work entries entered by the user are automatically submitted for approval after saving. Note that you can still modify the work entries even if they have been submitted. When unselected, the user must submit the work entries manually using `Submit` button (see [below](#submitting-work-entries-for-approval)). |
+| Save changes to work entries automatically | When selected, changes to the work entries are automatically saved. When unselected, the user must save the changes manually using `Save` button (see [below](#saving-changes-manually)). |
 
 ## Suggestions
 
@@ -199,9 +198,18 @@ The work entries that are so far entered for today are shown in a table.
 	- `Saved` all the changes have been saved successfully
 	- `Error` there was an error saving or deleting the entry; the error text is shown in detail and you can try saving the entry again by modifying some of the fields
 
-The changes you make to today's entries are saved right away in the background. You can freely continue making modifications to work entries even though there are savings in progress. The application makes sure that all the modifications are taken into account.
+The changes you make to today's entries are saved either automatically or manually depending on the user setting (see [above](#user-settings)). Once the saving has started, it proceeds in the background. You can freely continue making modifications to work entries even though there are savings in progress. The application makes sure that all the modifications are taken into account.
 
 Note that due to Workday constraints, the order of today's entries will not remain the same when you reload the page.
+
+## Saving Changes Manually
+
+![Save changes manually screenshot](savechangesmanually.png)
+
+These buttons appear if you have opted for saving changes to work entries manually in user settings (see [above](#user-settings)).
+
+ 1. You can save the changes to the work entry in question.
+ 2. You can discard the changes, restoring the work entry fields to their values at last saving.
 
 ## Role Selection
 
@@ -260,11 +268,11 @@ Tuntilukkari does not store any of the above data on its cloud services. However
 - Recent work entries cache
 - Available project tasks cache
 
-The above data stored on the browser's local storage does not contain any personal data of the user.
+The above data stored on the browser's local storage does not contain any personal data of the user. Note that the cache data is encrypted so that it is safe to use Tuntilukkari on shared or home computers even if task names or work entries contained confidential corporate information.
 
 ## Data Protection Rights
 
-All the data stored by Tuntilukkari reside on the computer used by the user and more specifically on the local storage of the browser. Thus, users can manage the data stored by the application by themselves.
+All the data stored by Tuntilukkari reside on the computer used by the user and more specifically on the local storage of the browser. Thus, users can manage the data (which does not contain any personal user information) by themselves.
 
 Users can access and manage all data stored by Tuntilukkari with the help of browser's tools. With Chrome: three dot menu -> More tools -> Developer tools -> Application -> Local Storage.
 
@@ -313,21 +321,13 @@ It takes normal people 23 minutes to orientate yourself when switching from one 
 
 # Development Roadmap
 
-## v3
-
-Usability:
-- User options to save changes manually instead of applying them automatically
-- Work entry deletion can be undone
-- Helpful hints in the UI pointing to corresponding documentation chapters
-
-Other:
-- Encrypt cache data on browser's local storage to protect corporate data on shared or home computers
-
-## v4
+## v5
 
 Usability:
 - Major rework: Users can enter and submit hours of the whole calendar weeks instead of only today
 - Indicate work entries sent back from approval along with their review comments
+- Work entry deletion can be undone
+- Helpful hints in the UI pointing to corresponding documentation chapters
 
 Jira integration:
 - The user can configure unlimited Jira instances to integrate with
@@ -336,7 +336,42 @@ Jira integration:
 - Jira time tracking: work entry hours are recorded as time tracking in Jira tickets
 - Project task is taken from Jira ticket or its epic link
 
-## v5
+## v6
 
 Internal comments:
 - Work entries have internal comment fields that are shown only to project manager at approval and not printed in the customer invoice
+
+# Change History
+
+## v4
+
+- User option to save changes manually instead of applying them automatically
+- Encrypt cache data on browser's local storage to protect corporate data on shared or home computers
+- Full support for Chromium browser
+- Better interoperability with the browser extension
+- Suggestions pane incidates which calendar entries overlap each other
+- The user can view calendar event details by clicking the calendar icon
+- Bug fix: Retrying failed saving created a duplicate work entry
+- Auto-complete of work entry description based on history
+- UI responsiveness improvements
+- Show also non-exact search results in task selection dropdown
+- Check that Workday UI language setting is supported by RPA integration
+- Improvements to task name parsing from a calendar entry
+- Hint the user at the first auto-submit that there is a setting to change the behavior
+- Enter can be used as a keyboard shortcut to save and apply
+
+## v3
+
+- Role selection if the user is assigned to multiple roles in a project
+- Improved responsiveness of the main table view
+- Project task names can be copied to clipboard
+- Show full project task name on mouse hover it the name has been cut with ellipsis on small screens
+- Show a warning if the task selection differs from a recent work entry with similar description
+- Page load performance improvements
+- Initialization is shown on a separate view instead of using alerts to indicate initialization
+- Use local storage cache to improve data synchronization performance
+- New entry must be saved manually; no more auto-saving of new entries because it was not so usable after all
+- Lots of minor usability improvements and some minor bug fixes
+- Chrome and Edge extensions published and installable in web stores
+- Hour input field accepts comma as decimal separator
+
