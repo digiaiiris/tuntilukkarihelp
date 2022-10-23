@@ -323,7 +323,7 @@ This tip suits only for calendar oriented people whose days are filled with meet
 ## Include Context Switching in the Work Entries
 
 It takes normal people 23 minutes to orientate yourself when switching from one kind of work to another ([source](https://www.loom.com/blog/cost-of-context-switching)). When your day is full with context switches it is often frustrating to add up the working hours at the end of the day.
-> Tip: Even though it may feel like you were not accomplishing much, do not fool yourself to write down less hours than you have been spending.
+> Tip: Even though it may feel like you were not accomplishing much, do not fool yourself into writing down less hours than you have been spending.
 
 > Tip: Times of context switching should be assigned to the tasks at hand. For example, it is a good practice to record 1,5 hours for a one-hour meeting if it meant you had to orientate yourself either before or after the meeting.
 
