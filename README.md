@@ -40,6 +40,14 @@ Tuntilukkari is used with a web browser. The application must be configured ever
 
 Currently, only Edge, Chrome and Chromium browsers are supported.
 
+## Authentication
+
+![Login view screenshot](loginview.png)
+
+The user will be prompted to authenticate using corporate credentials. Authentication allows the application to access user's calendar and make work entry suggestions based on today's events.
+
+1. Click the login button to be redirected to Microsoft authenticaion used by your company.
+
 ## Setup Process
 
 ![Setup view screenshot](setupview.png)
@@ -48,14 +56,6 @@ The user interface guides the user through the initial setup process.
 
 During the setup process, the user is instructed to activate a browser extension. The browser extension enables RPA (Robotic Process Automation)
 techonology which performs operations in Workday user interface in an automated and efficient fashion on user's behalf.
-
-## Authentication
-
-![Login view screenshot](loginview.png)
-
-The user will be prompted to authenticate using corporate credentials. Authentication allows the application to access user's calendar and make work entry suggestions based on today's events.
-
-1. Click the login button to be redirected to Microsoft authenticaion used by your company.
 
 ## Workday Window
 
@@ -110,9 +110,9 @@ The application automatically makes suggestions of today's work entries based on
 Suggestions can also be ignored. Ignored suggestions are shown in a separate collapsible list. If you ignore a calendar event series the event occurrences will automatically show up as ignored suggestions.
 
 1. You can apply apply all the complete and autofilled suggestions by clicking `Apply all`button.
-2. Icon shows the source of the suggestion (currently, only calendar suggestions are supported)
-3. Work description is either the event subject or parsed from the event text (see [below](#calendar-event-notations-to-enable-automatic-suggestions))
-4. Hours are taken from the event duration
+2. Icon shows the source of the suggestion. Clicking the icon shows calendar event details.
+3. Work description is either the event subject or parsed from the event text (see [below](#calendar-event-notations-to-enable-automatic-suggestions)).
+4. Hours are taken from the event duration.
 5. Project task selection is based on the event text (see [below](#calendar-event-notations-to-enable-automatic-suggestions)). If the event does not specify the project task, the application suggests project task using the Workday work entry history, searching for a work description that is similar to the event subject.
 6. Possible warnings are indicated with an icon with a tooltip describing the warning in more detail.
  > The application warns if project task matching accuracy was low, ie. if the project task specified in the event does not match with available project tasks with high accuracy.
@@ -198,9 +198,18 @@ The work entries that are so far entered for today are shown in a table.
 	- `Saved` all the changes have been saved successfully
 	- `Error` there was an error saving or deleting the entry; the error text is shown in detail and you can try saving the entry again by modifying some of the fields
 
-The changes you make to today's entries are saved either automatically or manually depending on the user setting (see [above](#user-settings)). Once the saving has started, it proceeds in the background. You can freely continue making modifications to work entries even though there are savings in progress. The application makes sure that all the modifications are taken into account.
+The changes you make to today's entries are saved either automatically or manually depending on the user setting (see [above](#user-settings)). Once the saving has started, it proceeds in the background.
+You can freely continue making modifications to work entries even though there are savings in progress. The application makes sure that all the modifications are taken into account.
 
 Note that due to Workday constraints, the order of today's entries will not remain the same when you reload the page.
+
+## Auto-Complete of Work Description
+
+![Auto-complete screenshot](autocomplete.png)
+
+Work description fields offer auto-complete suggestions based on recent work entry history. Picking up an auto-complete suggestion also selects the project task that has been recently used for that work description.
+
+1. Click an auto-complete suggestion to go with that description. Hovering a mouse over an auto-complete suggestions shows the project task what will be selected when the suggestions is clicked.
 
 ## Saving Changes Manually
 
