@@ -46,7 +46,7 @@ Currently, only Edge, Chrome and Chromium browsers are supported.
 
 The user will be prompted to authenticate using corporate credentials. Authentication allows the application to access user's calendar and make work entry suggestions based on today's events.
 
-1. Click the login button to be redirected to Microsoft authenticaion used by your company.
+1. Click the login button to be redirected to Microsoft authentication used by your company.
 
 ## Setup Process
 
