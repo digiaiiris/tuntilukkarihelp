@@ -155,6 +155,14 @@ With this functionality, you can enter new work entries manually if the suggesti
 
 One word of caution: If you find yourself usually entering work entries manually to all the fields (description, hours, project task) you should probably either adopt other features of Tuntilukkari as well or change your whole way of organizing your time at work (some more about this further below).
 
+## Work Description Field Auto-Complete
+
+![Auto-complete screenshot](autocomplete.png)
+
+Work description fields offer auto-complete suggestions based on recent work entry history. Picking up an auto-complete suggestion also selects the project task that has been recently used for that work description.
+
+1. Click an auto-complete suggestion to go with that description. Hovering a mouse over an auto-complete suggestions shows the project task what will be selected when the suggestions is clicked.
+
 ## Magic Wand Dialog (Using Recent Activity as Template)
 
 ![Magic wand dialog screenshot](magicwanddialog.png)
@@ -202,14 +210,6 @@ The changes you make to today's entries are saved either automatically or manual
 You can freely continue making modifications to work entries even though there are savings in progress. The application makes sure that all the modifications are taken into account.
 
 Note that due to Workday constraints, the order of today's entries will not remain the same when you reload the page.
-
-## Auto-Complete of Work Description
-
-![Auto-complete screenshot](autocomplete.png)
-
-Work description fields offer auto-complete suggestions based on recent work entry history. Picking up an auto-complete suggestion also selects the project task that has been recently used for that work description.
-
-1. Click an auto-complete suggestion to go with that description. Hovering a mouse over an auto-complete suggestions shows the project task what will be selected when the suggestions is clicked.
 
 ## Saving Changes Manually
 
