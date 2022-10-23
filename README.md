@@ -159,7 +159,7 @@ One word of caution: If you find yourself usually entering work entries manually
 
 ![Auto-complete screenshot](autocomplete.png)
 
-Work description fields offer auto-complete suggestions based on recent work entry history. Picking up an auto-complete suggestion also selects the project task that has been recently used for that work description.
+Work description field offers auto-complete suggestions based on recent work entry history. Picking up an auto-complete suggestion also selects the project task that has been recently used for that work description.
 
 1. Click an auto-complete suggestion to go with that description. Hovering a mouse over an auto-complete suggestions shows the project task what will be selected when the suggestions is clicked.
 
