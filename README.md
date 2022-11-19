@@ -22,6 +22,11 @@ There are multiple ways in which you're helped to record work entries efficientl
  8. The hour balance before today is shown alongside with today's total hours and the resulting current balance.
  9. The work entries that have been returned from approval are indicated clearly, preventing you from accidentally re-submitting the week without first taking care of correcting the returned hours.
 
+There are some things that you cannot record with tool. So, in order to do the following you must go to Workday:
+ 1. Vacations and othe absences
+ 2. Work entries titled to separately approved compensation
+ 3. Overtime work entries
+
 # Glossary of Important Terms
 
 | Term | Its meaning in this context  |
