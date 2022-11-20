@@ -375,6 +375,7 @@ Clockify styled work log and clocking for the day.
 - Billed, overtime and compensated work entries are shown as non-editable entry rows
 - Bug fix: Recent entry fetching left gaps in the history so that some recent entries could not be used as templates for new entries
 - Bug fix: User could not type hours exceeding 9.9
+- Bug fix: Saving of work entries sometimes resulted in 502 errors
 
 ## v4
 
