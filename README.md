@@ -373,7 +373,7 @@ Clockify styled work log and clocking for the day.
 ## v5
 - Record calendar week hours instead of the current day
 - Work entries returned from approval are indicated clearly along with their feedback
-- Week view can be filtered to show one weekday at a time
+- Week view can be filtered to show hours from one weekday at a time
 - When entering a work entry that's already present in the current week, indicate it and add the hours to the existing entry
 - Billed, overtime and compensated work entries are shown as non-editable entry rows
 - Auto-complete list can be navigated with arrow up & down keys
