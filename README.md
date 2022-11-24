@@ -106,6 +106,7 @@ User settings can be accessed from the profile picture on the top right corner -
 | ------- | ----------- |
 | Submit work entries automatically | When selected, the work entries entered by the user are automatically submitted for approval after saving. Note that you can still modify the work entries even if they have been submitted. When unselected, the user must submit the work entries manually using `Submit` button (see [below](#submitting-work-entries-for-approval)). |
 | Save changes to work entries automatically | When selected, changes to the work entries are automatically saved. When unselected, the user must save the changes manually using `Save` button (see [below](#saving-changes-manually)). |
+| Fetch also private calendar events | When selected, calendar events marked as private are also fetched and offered as suggestions for work entries of the day |
 
 ## Weekday Selection
 
@@ -369,6 +370,10 @@ Internal comments:
 Clockify styled work log and clocking for the day.
 
 # Change History
+
+## v5.43
+- User setting on whether to fetch private calendar events or not
+- Apply all button is shown also when a weekday is selected
 
 ## v5
 - Record calendar week hours instead of the current day
