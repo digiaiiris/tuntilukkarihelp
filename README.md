@@ -107,6 +107,7 @@ User settings can be accessed from the profile picture on the top right corner -
 | Submit work entries automatically | When selected, the work entries entered by the user are automatically submitted for approval after saving. Note that you can still modify the work entries even if they have been submitted. When unselected, the user must submit the work entries manually using `Submit` button (see [below](#submitting-work-entries-for-approval)). |
 | Save changes to work entries automatically | When selected, changes to the work entries are automatically saved. When unselected, the user must save the changes manually using `Save` button (see [below](#saving-changes-manually)). |
 | Fetch also private calendar events | When selected, calendar events marked as private are also fetched and offered as suggestions for work entries of the day |
+| Select the current weekday by default | When selected, the current weekday is selected at application startup. When unselected, the hours of the entire week are shown. |
 
 ## Weekday Selection
 
@@ -340,7 +341,6 @@ It takes normal people 23 minutes to orientate yourself when switching from one 
 
 ## v5.x
 
-- User setting about whether to fetch and show private Calendar meetings or not
 - Refesh Azure/O365 authentication token in the background without forcing the user to re-load the page
 - Work entry order should stay the same at page re-load (and maybe user could change their order)
 - Role options caching to speeden up week entries loading
@@ -371,9 +371,11 @@ Clockify styled work log and clocking for the day.
 
 # Change History
 
-## v5.43
+## v5.58
 - User setting on whether to fetch private calendar events or not
+- User settings on whether the current weekdady is selected by default or whether the entire week is shown
 - Apply all button is shown also when a weekday is selected
+- Shown a hint of the entire week view when a weekday is selected so that hours from other weekdays are hiddn
 
 ## v5
 - Record calendar week hours instead of the current day
