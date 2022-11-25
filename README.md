@@ -345,7 +345,6 @@ It takes normal people 23 minutes to orientate yourself when switching from one 
 - Work entry order should stay the same at page re-load (and maybe user could change their order)
 - Role options caching to speeden up week entries loading
 - Browsing of previous weeks
-- Suggestions for the future days (for the current week) should be hidden by default
 
 ## v6
 
@@ -371,11 +370,12 @@ Clockify styled work log and clocking for the day.
 
 # Change History
 
-## v5.58
+## v5.66
 - User setting on whether to fetch private calendar events or not
 - User settings on whether the current weekdady is selected by default or whether the entire week is shown
 - Apply all button is shown also when a weekday is selected
 - Shown a hint of the entire week view when a weekday is selected so that hours from other weekdays are hiddn
+- Suggestions are not shown for future days in entire week view
 
 ## v5
 - Record calendar week hours instead of the current day
