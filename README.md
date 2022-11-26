@@ -370,12 +370,13 @@ Clockify styled work log and clocking for the day.
 
 # Change History
 
-## v5.66
+## v5.87
 - User setting on whether to fetch private calendar events or not
 - User settings on whether the current weekdady is selected by default or whether the entire week is shown
 - Apply all button is shown also when a weekday is selected
 - Shown a hint of the entire week view when a weekday is selected so that hours from other weekdays are hiddn
 - Suggestions are not shown for future days in entire week view
+- Improvements on responsiveness on large screen
 
 ## v5
 - Record calendar week hours instead of the current day
