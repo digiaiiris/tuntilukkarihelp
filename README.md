@@ -370,7 +370,7 @@ Clockify styled work log and clocking for the day.
 
 # Change History
 
-## v5.94
+## v5.116
 - User setting on whether to fetch private calendar events or not
 - User settings on whether the current weekdady is selected by default or whether the entire week is shown
 - Apply all button is shown also when a weekday is selected
@@ -378,6 +378,7 @@ Clockify styled work log and clocking for the day.
 - Suggestions are not shown for future days in entire week view
 - Improvements on responsiveness on large screen
 - Preserve the order of week entries
+- Azure authentication is refreshed silently in the background
 
 ## v5
 - Record calendar week hours instead of the current day
