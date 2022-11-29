@@ -241,9 +241,16 @@ These buttons appear only if you have opted for saving changes to work entries m
  9. You can save the changes to the work entry in question.
  10. You can discard the changes, restoring the work entry fields to their previously saved values.
 
-## Merging Hours to an Existing Work Entry
+## Adding Hours to an Existing Work Entry
 
-TBD
+![Merge screenshot](merge.png)
+
+When recording new hours to a work entry that already exists on the current week, the hours will be added to the current entry.
+
+ 1. The existing entry with an identical description and project task is indicated with a green background when the new entry is being edited.
+ 2. Save button has `+` indicating that the hours will be added to an existing item instead of creating a new one.
+
+> Pro tip: You can add hours to existing entries in multiple ways. Either editing the hours in the week's work entries, adding a new one with identical description and project task, using auto-complete or magic wand button to choose an existing entry, or applying a suggestion that is similar to an existing entry. Take whichever you like best
 
 ## Submitting Work Entries for Approval
 
