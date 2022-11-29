@@ -379,6 +379,7 @@ Clockify styled work log and clocking for the day.
 - Improvements on responsiveness on large screen
 - Preserve the order of week entries
 - Azure authentication is refreshed silently in the background
+- A new extension (v4.2) which removes the need to restart browser at installation phase
 
 ## v5
 - Record calendar week hours instead of the current day
