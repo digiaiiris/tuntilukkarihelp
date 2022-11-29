@@ -111,7 +111,14 @@ User settings can be accessed from the profile picture on the top right corner -
 
 ## Weekday Selection
 
-TBD
+![Weekday selection screenshot](weekdayselection.png)
+
+Only such suggestions and week's entries are shown which have hours on the selected weekday.
+
+1. Selected weekday can be changed by clicking the weekday caption. Clicking the currently selected weekday shows the hours of the entire week.
+2. You can show Saturnday and Sunday by clicking `Show weekend`.
+
+By default, the current weekday is selected. You can change the behavior so that the entire week is shown by default. See settings [below](#user-settings).
 
 ## Suggestions
 
