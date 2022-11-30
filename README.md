@@ -268,7 +268,24 @@ The saved work entries can be submitted either automatically or manually (see se
 
 ## Work Entries Returned from Approval
 
-TBD
+![Show them button screenshot](showthem.png)
+
+Hours cannot be submitted if there are work entries that have been returned from approval by the project manager.
+
+1. The situation is indicated by an icon and a text
+2. Clicking `Show them` opens up a sidebar that shows the returned work entries and the feedback from approval
+
+![Rejections sidebar screenshot](rejections.png)
+
+There can be multiple returns from approval.
+
+1. Feedback can be selected by clicking it
+2. The work entries related to the returned submit are highlighted with a red frame in the week's work entries. Note that Workday does not allow focusing the feedback on specific hours. Instead, all the hours submitted at the same time are highlighted and the feedback helps you to decided what corrections need to be done to the entries.
+3. Feedback shows all the major events of the approval process, including the submitting of the work entries and their sending back, along with a comment from the project manager.
+4. Feedback status can be `Unresolved` or `Resolved`.
+5. Once you have made the corrections to the returned work entries, mark the feedback as resolved. Only then you can submit the work entries of the week.
+
+Note that you need to submit the week's work entries to resolve the approval feedback completely. Otherwise, the feedback show up again when you reload the application.
 
 # Calendar Event Notations to Enable Automatic Suggestions
 
