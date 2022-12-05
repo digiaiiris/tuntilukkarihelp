@@ -372,8 +372,6 @@ It takes normal people 23 minutes to orientate yourself when switching from one 
 
 ## v5.x
 
-- Refesh Azure/O365 authentication token in the background without forcing the user to re-load the page
-- Work entry order should stay the same at page re-load (and maybe user could change their order)
 - Role options caching to speeden up week entries loading
 - Browsing of previous weeks
 
@@ -401,6 +399,13 @@ Clockify styled work log and clocking for the day.
 
 # Change History
 
+## v5.126
+- Bug fix: Recording work entries caused 0-hour rows to appear for approving; also Ready to Bill status was removed for existing hours
+- Handle "Too many repeating requests" error by Workday
+- Bug fix: Application caused left-over recovered sessions in Workday
+- Bug fix: When modifying multiple saved entries with similar descriptions and task names the hours were sometimes messed up
+- Some cosmetic bug fixes related to displayment of warnings and errors
+
 ## v5.116
 - User setting on whether to fetch private calendar events or not
 - User settings on whether the current weekdady is selected by default or whether the entire week is shown
@@ -408,7 +413,7 @@ Clockify styled work log and clocking for the day.
 - Shown a hint of the entire week view when a weekday is selected so that hours from other weekdays are hiddn
 - Suggestions are not shown for future days in entire week view
 - Improvements on responsiveness on large screen
-- Preserve the order of week entries
+- Preserve the order of the week's work entries when the application is restarted
 - Azure authentication is refreshed silently in the background
 - A new extension (v4.2) which removes the need to restart browser at installation phase
 
