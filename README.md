@@ -399,6 +399,10 @@ Clockify styled work log and clocking for the day.
 
 # Change History
 
+## v5.137
+- Bug fix: Modifying hours of an existing entry without role options sometimes resulted in duplicate hours (visible only after page refresh)
+- Cosmetic UI fixes related to showing saving errors and a warning next to task button
+
 ## v5.126
 - Bug fix: Recording work entries caused 0-hour rows to appear for approving; also Ready to Bill status was removed for existing hours
 - Handle "Too many repeating requests" error by Workday
