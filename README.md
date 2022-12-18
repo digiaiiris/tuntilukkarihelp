@@ -399,11 +399,21 @@ Clockify styled work log and clocking for the day.
 
 # Change History
 
+## v.5.215
+- Version updates are indicated to all active users
+- Application can be open for the whole week, no need to refresh page when day changes
+- Workday session is updated semi-automatically (especially if popups are enabled for the page)
+- Bug fix: Some users experienced "RangeError: Maximum call stack size exceeded" error in initialization view
+- Bug fix: Some users experiences 502 errors when saving work entries; especially if the window had been open for a long period of time
+- UI color improvements
+
 ## v5.137
+
 - Bug fix: Modifying hours of an existing entry without role options sometimes resulted in duplicate hours (visible only after page refresh)
 - Cosmetic UI fixes related to showing saving errors and a warning next to task button
 
 ## v5.126
+
 - Bug fix: Recording work entries caused 0-hour rows to appear for approving; also Ready to Bill status was removed for existing hours
 - Handle "Too many repeating requests" error by Workday
 - Bug fix: Application caused left-over recovered sessions in Workday
@@ -411,6 +421,7 @@ Clockify styled work log and clocking for the day.
 - Some cosmetic bug fixes related to displayment of warnings and errors
 
 ## v5.116
+
 - User setting on whether to fetch private calendar events or not
 - User settings on whether the current weekdady is selected by default or whether the entire week is shown
 - Apply all button is shown also when a weekday is selected
@@ -422,6 +433,7 @@ Clockify styled work log and clocking for the day.
 - A new extension (v4.2) which removes the need to restart browser at installation phase
 
 ## v5
+
 - Record calendar week hours instead of the current day
 - Work entries returned from approval are indicated clearly along with their feedback
 - Week view can be filtered to show hours from one weekday at a time
