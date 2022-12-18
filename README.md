@@ -399,7 +399,7 @@ Clockify styled work log and clocking for the day.
 
 # Change History
 
-## v.5.224
+## v5.235
 - Version updates are indicated to all active users
 - Application can be open for the whole week, no need to refresh page when day changes
 - Workday session is updated semi-automatically (especially if popups are enabled for the page)
@@ -408,6 +408,8 @@ Clockify styled work log and clocking for the day.
 - Bug fix: Some users had 401 errors in initialization after computer had been awoken from sleep
 - Bug fix: Some users experienced "Too many concurrent requests" errors while saving work entries
 - UI color improvements
+- Use parsed task name in task selection dropdown as the initial search input instead of showing it in grey colored text
+- Apply button is yellow (with icon) if there are warnings related to suggestion task auto-selection
 
 ## v5.137
 
