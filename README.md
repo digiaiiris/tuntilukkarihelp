@@ -399,13 +399,14 @@ Clockify styled work log and clocking for the day.
 
 # Change History
 
-## v.5.215
+## v.5.224
 - Version updates are indicated to all active users
 - Application can be open for the whole week, no need to refresh page when day changes
 - Workday session is updated semi-automatically (especially if popups are enabled for the page)
 - Bug fix: Some users experienced "RangeError: Maximum call stack size exceeded" error in initialization view
 - Bug fix: Some users experiences 502 errors when saving work entries; especially if the window had been open for a long period of time
 - Bug fix: Some users had 401 errors in initialization after computer had been awoken from sleep
+- Bug fix: Some users experienced "Too many concurrent requests" errors while saving work entries
 - UI color improvements
 
 ## v5.137
