@@ -399,6 +399,13 @@ Clockify styled work log and clocking for the day.
 
 # Change History
 
+## v5.240
+- New domain name
+- Bug fix: Hour balance was calculated incorrectly when adding hours to vacation days
+- Bug fix: Autocomplete fuzzy search had broken in recent changes
+- Filter away Holiday and like events from calendar events
+- Initialization view hints about allowing popups if they are blocked
+
 ## v5.235
 - Version updates are indicated to all active users
 - Application can be open for the whole week, no need to refresh page when day changes
