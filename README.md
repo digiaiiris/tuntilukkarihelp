@@ -134,7 +134,7 @@ Suggestions can also be ignored. Ignored suggestions are shown in a separate col
 3. The suggested work description is either the event subject or parsed from the event text (see [below](#calendar-event-notations-to-enable-automatic-suggestions)).
 4. The suggested hours are taken from the event durations.
 5. The suggested project task is based on the event text (see [below](#calendar-event-notations-to-enable-automatic-suggestions)). If the event does not specify the project task, the application suggests project task using the recent work entry history, searching for a work description that matches the event subject.
-6. You can select the role from a dropdown in case you have multiple roles assigned in the project. By default, the first role or the default role set in [user settings](https://github.com/digiaiiris/tuntilukkarihelp#user-settings) is selected.
+6. You can select the role from a dropdown in case you have multiple roles assigned in the project. By default, the first role or the default role set in [user settings](#user-settings) is selected.
 7. Possible warnings are indicated with an icon with a tooltip describing the warning in more detail.
  > The application warns if project task matching accuracy was low, ie. if the project task specified in the event does not match with available project tasks with high accuracy.
 
@@ -164,7 +164,7 @@ With this functionality, you can enter new work entries manually if the suggesti
 > Note that you can enter long and multiline text into the description field. After entering a long text, the text input will collapse and you will be indicated by an ellipsis (…) that some part of the text is not visible.
 3. Number of hours you've been working on the subject for each weekday. The hours can be entered in 0.5 hours (30 minutes) precision.
 4. You can select the project task from a dropdown (see [below](#project-task-selection) for more details) if you don't use the magic wand button to fill it.
-5. You can select the role from a dropdown in case you have multiple roles assigned in the project. By default, the first role or the default role set in [user settings](https://github.com/digiaiiris/tuntilukkarihelp#user-settings) is selected.
+5. You can select the role from a dropdown in case you have multiple roles assigned in the project. By default, the first role or the default role set in [user settings](#user-settings) is selected.
 6. You can reset new work entry fields to empty values
 7. State can be one of the following:
 	- `Incomplete` not all the fields are filled up
