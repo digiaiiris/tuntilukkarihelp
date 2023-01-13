@@ -108,6 +108,7 @@ User settings can be accessed from the profile picture on the top right corner -
 | Save changes to work entries automatically | When selected, changes to the work entries are automatically saved. When unselected, the user must save the changes manually using `Save` button (see [below](#saving-changes-manually)). |
 | Fetch also private calendar events | When selected, calendar events marked as private are also fetched and offered as suggestions for work entries of the day |
 | Select the current weekday by default | When selected, the current weekday is selected at application startup. When unselected, the hours of the entire week are shown. |
+| Default role for new entries | The selected role is used as default for new work entries. If a project does not have the default role then the first available role is selected. |
 
 ## Weekday Selection
 
@@ -133,7 +134,7 @@ Suggestions can also be ignored. Ignored suggestions are shown in a separate col
 3. The suggested work description is either the event subject or parsed from the event text (see [below](#calendar-event-notations-to-enable-automatic-suggestions)).
 4. The suggested hours are taken from the event durations.
 5. The suggested project task is based on the event text (see [below](#calendar-event-notations-to-enable-automatic-suggestions)). If the event does not specify the project task, the application suggests project task using the recent work entry history, searching for a work description that matches the event subject.
-6. Role can be selected only after applying the suggestion. By default, the first role for the project will be selected for the work entry.
+6. You can select the role from a dropdown in case you have multiple roles assigned in the project. By default, the first role or the default role set in [user settings](https://github.com/digiaiiris/tuntilukkarihelp#user-settings) is selected.
 7. Possible warnings are indicated with an icon with a tooltip describing the warning in more detail.
  > The application warns if project task matching accuracy was low, ie. if the project task specified in the event does not match with available project tasks with high accuracy.
 
@@ -163,11 +164,12 @@ With this functionality, you can enter new work entries manually if the suggesti
 > Note that you can enter long and multiline text into the description field. After entering a long text, the text input will collapse and you will be indicated by an ellipsis (…) that some part of the text is not visible.
 3. Number of hours you've been working on the subject for each weekday. The hours can be entered in 0.5 hours (30 minutes) precision.
 4. You can select the project task from a dropdown (see [below](#project-task-selection) for more details) if you don't use the magic wand button to fill it.
-5. You can reset new work entry fields to empty values
-6. State can be one of the following:
+5. You can select the role from a dropdown in case you have multiple roles assigned in the project. By default, the first role or the default role set in [user settings](https://github.com/digiaiiris/tuntilukkarihelp#user-settings) is selected.
+6. You can reset new work entry fields to empty values
+7. State can be one of the following:
 	- `Incomplete` not all the fields are filled up
 	- `Complete` entry is ready to be saved
-7. You can save the new work entry by clicking `Save` button. The entry moves to the week's work entries where you can still modify it. 
+8. You can save the new work entry by clicking `Save` button. The entry moves to the week's work entries where you can still modify it. 
 
 > Pro tip: You can use `Tab` and `Shift+Tab` to move between fields quickly.
 
@@ -221,7 +223,7 @@ The work entries that are so far entered for the week are shown in a table.
  2. Long description texts are indicated with an ellipsis (…)
  3. You can change the hours for each weekday.
  4. You can change the project task selection.
- 5. You can change the role for such projects where you have been assigned to more than one role. The selected role is shown with its initial letters. The role selection is possible only after a work entry has been saved the first time.
+ 5. You can change the role for such projects where you have been assigned to more than one role. The selected role is shown with its initial letters.
  6. You can duplicate the work entry to enter another one. Duplicating copies the hours and project task of the original one to the new entry, leaving for you to write the work description.
  7. You can delete the work entry.
  8. The work entry state can be one of the following:
@@ -372,7 +374,6 @@ It takes normal people 23 minutes to orientate yourself when switching from one 
 
 ## v5.x
 
-- Role options caching to speeden up week entries loading
 - Browsing of previous weeks
 
 ## v6
@@ -398,6 +399,14 @@ Internal comments:
 Clockify styled work log and clocking for the day.
 
 # Change History
+
+## v5.270
+- User can select a default role for new work entries in the user settings
+- Role options are shown for new entries already before the entry has been saved
+- Project specific role options are cached to speeden up data synchronization
+- Bug fix: Apply+ sometimes did not add hours to the existing (and highlighted) row
+- Bug fix: Recent entry query returned invalid dates for the entries of the last year
+- Header has now link to Teams support channel
 
 ## v5.240
 - New domain name
