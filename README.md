@@ -372,15 +372,14 @@ It takes normal people 23 minutes to orientate yourself when switching from one 
 
 # Development Roadmap
 
-## v5.x
+## v6.x
 
-- Browsing of previous weeks
-
-## v6
-
+- Browsing of previous weeks in enter hours view
 - User can undo some changes (eg. work entry deletion)
 - Compatibility improvements for different Workday language etc. settings
-- Support for Firefox
+- User hours module development, eg. ability to search for more than 10 weeks and bulk actions like moving entries to another project
+- Bug fix: If the user is fixed to a role on task level assignment the saving of work entries may fail
+- Rejections should be refreshed in the background and not only on data synchronization
 
 ## v7
 
@@ -399,6 +398,15 @@ Internal comments:
 Clockify styled work log and clocking for the day.
 
 # Change History
+
+## v6.0
+- Support for Firefox
+- Hours can be entered with two decimals
+- View My Hours module (first experimental version)
+- Added a menu to switch between modules; documentation and support channel links moved to the menu as well
+- Optimized project synchronization to tackle with "Too many repeating requests" error
+- Role options are synchronized lazily only after projects have been saved to optimize data synchronization
+- New (probably just a temporary) logo
 
 ## v5.270
 - User can select a default role for new work entries in the user settings
