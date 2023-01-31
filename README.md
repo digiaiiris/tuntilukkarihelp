@@ -44,7 +44,7 @@ There are some things that you cannot do with this application. So, in order to 
 
 This application is used with a web browser. The application must be configured every time you start it on a new computer (or in incognito window). That is because the application stores user-specific data only in the storage of your browser. No data is stored on Tuntilukkari cloud services.
 
-Currently, only Edge, Chrome and Chromium browsers are supported.
+Currently, only Edge, Chrome, Chromium and Firefox browsers are supported.
 
 ## Authentication
 
