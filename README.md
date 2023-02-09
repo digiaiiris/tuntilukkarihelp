@@ -399,6 +399,12 @@ Clockify styled work log and clocking for the day.
 
 # Change History
 
+## v6.62
+- Support for Workday instances with different default locales
+- Support for Workday instances which do not use project roles
+- Preview mode for potential customers with no Azure integration
+- Bug fix: Saving of week's entries sometimes worked incorrectly if there were more than 30 entries for the week
+
 ## v6.0
 - Support for Firefox
 - Hours can be entered with two decimals
