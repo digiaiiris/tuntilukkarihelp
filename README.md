@@ -399,6 +399,10 @@ Clockify styled work log and clocking for the day.
 
 # Change History
 
+## v6.89
+- Suggestions take a maximum of 1/3 of screen height and they use pagination
+- Bug fix: Getting week's entries left recovered sessions to Workday (regression bug from v6.62)
+
 ## v6.62
 - Support for Workday instances with different default locales
 - Support for Workday instances which do not use project roles
