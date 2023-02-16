@@ -399,6 +399,9 @@ Clockify styled work log and clocking for the day.
 
 # Change History
 
+## v6.107
+- When work entries were modified in Workday while the application was open it could results in duplicate entries if the user modified the same entries in the app afterwards
+
 ## v6.99
 - Suggestions take a maximum of 1/3 of screen height and use pagination
 - Don't user monospace font for description input field because it didn't look nice
