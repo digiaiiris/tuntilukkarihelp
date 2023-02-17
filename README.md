@@ -404,6 +404,7 @@ Clockify styled work log and clocking for the day.
 
 ## v6.99
 - Suggestions take a maximum of 1/3 of screen height and use pagination
+- User can switch the selected weekday by clicking the total hours of a weekday
 - Don't user monospace font for description input field because it didn't look nice
 - Bug fix: Getting week's entries left recovered sessions to Workday (regression bug from v6.62)
 
