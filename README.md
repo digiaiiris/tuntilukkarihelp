@@ -399,6 +399,11 @@ Clockify styled work log and clocking for the day.
 
 # Change History
 
+## v6.115
+ - Bug fix: Current balance did not include Overtime as fee and other non-regular absence plans
+ - Bug fix: Saving sometimes failed with a cryptic ReferenceError error
+ - Added link from the current balance to open Time Off Report in Workday window
+
 ## v6.107
 - When work entries were modified in Workday while the application was open it could results in duplicate entries if the user modified the same entries in the app afterwards
 
