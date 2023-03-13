@@ -399,6 +399,9 @@ Clockify styled work log and clocking for the day.
 
 # Change History
 
+## v6.116
+ - Provide user specific instructions on how to solve the situation where saving fails because of project changes that prevent the use of Enter Time by Type dialog of Workday
+
 ## v6.115
  - Bug fix: Current balance did not include Overtime as fee and other non-regular absence plans
  - Bug fix: Saving sometimes failed with a cryptic ReferenceError error
