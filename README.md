@@ -108,6 +108,7 @@ User settings can be accessed from the profile picture on the top right corner -
 | Save changes to work entries automatically | When selected, changes to the work entries are automatically saved. When unselected, the user must save the changes manually using `Save` button (see [below](#saving-changes-manually)). |
 | Fetch also private calendar events | When selected, calendar events marked as private are also fetched and offered as suggestions for work entries of the day |
 | Select the current weekday by default | When selected, the current weekday is selected at application startup. When unselected, the hours of the entire week are shown. |
+| Hours input tick interval | Set the interval that is used in hour input control when using up or down buttons or keyboard arrows to increase or decrease the hours. |
 | Default role for new entries | The selected role is used as default for new work entries. If a project does not have the default role then the first available role is selected. |
 
 ## Weekday Selection
