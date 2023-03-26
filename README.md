@@ -399,6 +399,15 @@ Clockify styled work log and clocking for the day.
 
 # Change History
 
+## v6.177
+- Bug fix: Sometimes saving ended with 409 EXISTING_HOURS_DO_NOT_MATCH
+- Bug fix: When changing hours just after applying a suggestion the change was not saved automatically
+- Bug fix: Changing hours with up/down keys did not save the changes
+- New user setting: Hour input tick interval
+- Improved error handling of RPA functions in order to avoid various errors in initialization and entry saving
+- Support for EXT users who do not have Time Off Balance reportt
+- View My Hours fetches entry history separately from Enter Hours screen so that the entry history is certainly correct
+
 ## v6.116
  - Provide user specific instructions on how to solve the situation where saving fails because of project changes that prevent the use of Enter Time by Type dialog of Workday
 
