@@ -400,6 +400,22 @@ Clockify styled work log and clocking for the day.
 
 # Change History
 
+## v6.266
+- Bug fix: With Firefox copy button for task name was hidden behind a vertical scrollbar
+- Bug fix: Inbox should not be refreshed when Workday session has been timed out; caused a lot of 4xx & 5xx responses
+
+## v6.261
+- View My Hours module no longer WIP (Work In Progress)
+- View My Hours: User can choose between different table modes that show the data by description, by project, by task, or each entry separately
+- View My Hours: Selected table rows are highlighted in the histograph graph bars
+- View My Hours: Various bug fixes, usability issues, and visual improvements
+- View My Hours: User can easily reset filters
+- View My Hours: User can select a date range by dragging/zooming the histogram graph
+- View My Hours: User can export hour table data to Excel
+- Bug fix: Merging two saved entries and saving it resulted in 500 Internal Server Error
+- Bug fix: Dashes in task name messed up the automatic suggestion based on a calendar event
+- Bug fix: Suggestion pagination was updated with a long delay at page load
+
 ## v6.177
 - Bug fix: Sometimes saving ended with 409 EXISTING_HOURS_DO_NOT_MATCH
 - Bug fix: When changing hours just after applying a suggestion the change was not saved automatically
