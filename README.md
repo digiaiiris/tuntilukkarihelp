@@ -448,16 +448,14 @@ It takes normal people 23 minutes to orientate yourself when switching from one 
 
 # Development Roadmap
 
-## v6.x
+## v7.x
 
-- Browsing of previous weeks in enter hours view
+- Retrieve project tasks from Workday REST API instead of RPA to get the application to work for users with hundreds of projects
 - User can undo some changes (eg. work entry deletion)
 - Compatibility improvements for different Workday language etc. settings
-- User hours module development, eg. ability to search for more than 10 weeks and bulk actions like moving entries to another project
 - Bug fix: If the user is fixed to a role on task level assignment the saving of work entries may fail
-- Rejections should be refreshed in the background and not only on data synchronization
 
-## v7
+## v8
 
 Jira integration:
 - The user can configure unlimited Jira instances to integrate with
@@ -466,7 +464,7 @@ Jira integration:
 - Jira time tracking: work entry hours are recorded as time tracking in Jira tickets
 - Project task is taken from Jira ticket or its epic link
 
-## v8
+## v9
 
 Internal comments:
 - Work entries have internal comment fields that are shown only to project manager at approval and not printed in the customer invoice
