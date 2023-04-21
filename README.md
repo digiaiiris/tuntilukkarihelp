@@ -77,10 +77,10 @@ To automate Workday window opening, please allow popups for the page in the brow
 
 The application consists of different modules. The current module can be switched from the menu in the top-left corner.
 
- 1. *Enter Hours* module allows you to record work entries, see its manual [below](#enter-hours-usage-and-features)
- 2. *View My Hours* module allows you to search and visualize work entries of the past, see its manual [below](#view-my-hours-usage-and-features)
- 3. *Documentation* opens this user manual
- 4. *Support channel* opens the Teams support channel
+ 1. **Enter Hours** module allows you to record work entries, see its manual [below](#enter-hours-usage-and-features)
+ 2. **View My Hours** module allows you to search and visualize work entries of the past, see its manual [below](#view-my-hours-usage-and-features)
+ 3. **Documentation** opens this user manual
+ 4. **Support channel** opens the Teams support channel
 
 ## Number of Workday Notifications
 
