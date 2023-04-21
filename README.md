@@ -69,7 +69,63 @@ Workday must be opened on another window/tab of the browser. Actually, it is eno
 
 The application will prompt you if the Workday session is going to expire and you need to open Workday again on another window.
 
-# Usage and Features
+To automate Workday window opening, please allow popups for the page in the browser.
+
+# Module Selection and General Usage
+
+![Modules screenshot](modules.png)
+
+The application consists of different modules. The current module can be switched from the menu in the top-left corner.
+
+ 1. *Enter Hours* module allows you to record work entries, see its manual [below](#enter-hours-usage-and-features)
+ 2. *View My Hours* module allows you to search and visualize work entries of the past, see its manual [below](#view-my-hours-usage-and-features)
+ 3. *Documentation* opens this user manual
+ 4. *Support channel* opens the Teams support channel
+
+## Number of Workday Notifications
+
+![Workday notifications screenshot](workdaynotifications.png)
+
+In the top-right corner of the page, the number of unacknowledged Workday notifications and actions waiting for you in Workday inbox are shown. You can click the icons to open Workday notifications or inbox on another browser tab.
+
+## User Menu
+
+![User menu screenshot](usermenu.png)
+
+User menu can be accessed from the profile picture in the top-right corner of the page.
+
+ 1. Access user settings, see [below](#user-settings)
+ 2. Log out
+
+## User Settings
+
+![User settings screenshot](usersettings.png)
+
+User settings can be accessed from the profile picture in the top-right corner of the page -> `Settings`.
+
+| Setting | Description |
+| ------- | ----------- |
+| Submit work entries automatically | When selected, the work entries entered by the user are automatically submitted for approval after saving. Note that you can still modify the work entries even if they have been submitted. When unselected, the user must submit the work entries manually using `Submit` button (see [below](#submitting-work-entries-for-approval)). |
+| Save changes to work entries automatically | When selected, changes to the work entries are automatically saved. When unselected, the user must save the changes manually using `Save` button (see [below](#saving-changes-manually)). |
+| Fetch also private calendar events | When selected, calendar events marked as private are also fetched and offered as suggestions for work entries of the day |
+| Select the current weekday by default | When selected, the current weekday is selected at application startup. When unselected, the hours of the entire week are shown. |
+| Hours input tick interval | Set the interval that is used in hour input control when using up or down buttons or keyboard arrows to increase or decrease the hours. |
+| Default role for new entries | The selected role is used as default for new work entries. If a project does not have the default role then the first available role is selected. |
+
+# Enter Hours: Usage and Features
+
+## Week Selection
+
+![Week selection screenshot](weekselection.png)
+
+In the top bar, the currently selected week is indicated and can be changed:
+
+ 1. You can navigate to the current week by clicking the icon.
+ 2. Switch to the previous week.
+ 3. The currently selected week (starting from Monday) is shown.
+ 4. Switch to the next week.
+ 
+Changing a week causes the page to reload and synchronize data again from Workday.
 
 ## Hour Balances
 
@@ -80,36 +136,6 @@ In the top bar, three numbers are indicated concerning the hour balances:
  1. Total number of hours entered so far for the week. This includes entries that are just being saved into Workday. Suggestions are not included.
  2. Hour balance before the week, corresponding to the balance shown by `Time Off Balance` Wokday report
  3. Current hour balance considering hour balance before the week, the required work hours and the total number of hours entered so far. The current balance considers only such weekdays that have work entries recorded for them.
-
-## Number of Workday Notifications
-
-![Workday notifications screenshot](workdaynotifications.png)
-
-In the top bar, the number of unacknowledged Workday notifications and actions waiting for you in Workday inbox are shown. You can click the icons to open Workday notifications or inbox on another browser tab.
-
-## User Menu
-
-![User menu screenshot](usermenu.png)
-
-User menu can be accessed from the profile picture on the top right corner.
-
- 1. Access user settings, see [below](#user-settings)
- 2. Log out
-
-## User Settings
-
-![User settings screenshot](usersettings.png)
-
-User settings can be accessed from the profile picture on the top right corner -> `Settings`.
-
-| Setting | Description |
-| ------- | ----------- |
-| Submit work entries automatically | When selected, the work entries entered by the user are automatically submitted for approval after saving. Note that you can still modify the work entries even if they have been submitted. When unselected, the user must submit the work entries manually using `Submit` button (see [below](#submitting-work-entries-for-approval)). |
-| Save changes to work entries automatically | When selected, changes to the work entries are automatically saved. When unselected, the user must save the changes manually using `Save` button (see [below](#saving-changes-manually)). |
-| Fetch also private calendar events | When selected, calendar events marked as private are also fetched and offered as suggestions for work entries of the day |
-| Select the current weekday by default | When selected, the current weekday is selected at application startup. When unselected, the hours of the entire week are shown. |
-| Hours input tick interval | Set the interval that is used in hour input control when using up or down buttons or keyboard arrows to increase or decrease the hours. |
-| Default role for new entries | The selected role is used as default for new work entries. If a project does not have the default role then the first available role is selected. |
 
 ## Weekday Selection
 
@@ -290,7 +316,7 @@ There can be multiple returns from approval.
 
 Note that you need to submit the week's work entries to resolve the approval feedback completely. Otherwise, the feedback show up again when you reload the application.
 
-# Calendar Event Notations to Enable Automatic Suggestions
+## Calendar Event Notations to Enable Automatic Suggestions
 
 ![Calendar notation screenshot](calendarnotation.png)
 
@@ -303,6 +329,55 @@ The application searches the calendar event text (body description) for the foll
 |WD: \<project task>|Other keywords also supported: Tuntikirjauskohde, Tuntikohde, Hours, Hours to, Task, Tunnit|
 |Workday: \<project task>, description: \<work description>|The work description can be given after the project task. Work description field must be seperated from the project task with a separator such as comma, dot (.) or a line break.|
 |Workday: \<project task>, comments: \<work description>|Other keywords also supported for work description field: Kommentiksi, Kommentti, Jira ticket, Jira, Comment, Selite, Selitteeksi, Tiketille, Tiketti|
+
+# View My Hours: Usage and Features
+
+## Entry Filtering
+
+![Filtering screenshot](viewmyhours_filtering.png)
+
+The left-hand side of the page allows you to filter the work entries inspected.
+
+1. Filter work entries according to dates.
+2. Filter work entries according to work descriptions.
+3. Filter work entries according to projects.
+4. Filter work entries according to project tasks.
+5. A filter can be expanded and modified by clicking the arrow button.
+6. An active filter is indicated with an icon. The filter can be cleared by clicking the button.
+
+## Fetching More History
+
+![Fetching screenshot](viewmyhours_fetching.png)
+
+Initially, only two weeks of history is fetched.
+
+Changing the date filtering causes the application to start fetching entry history data from a longer period of time.
+
+## Histogram
+
+![Histogram screenshot](viewmyhours_histogram.png)
+
+The filtered work entries are visualized with a histogram panel:
+
+1. The hours are showed as a graph, showing each day and its total hours separately.
+2. The title shows the total number of hours, minimum and maximum number of daily hours, and the average number of daily hours.
+3. The work entries selected in the table below are indicated with a dark blue color.
+4. You can zoom in by dragging the mouse over a date period. This changes the date filtering.
+
+## Table
+
+![Table screenshot](viewmyhours_table.png)
+
+The filtered work entries are visualized with a table, using four different visualization styles:
+
+1. Show hours per work description and project task.
+2. Show hours per project.
+3. Show hours per project task.
+4. Show all recorded work entries.
+5. Rows can be selected. The selected rows are indicated in the [histogram](#histogram) panel with dark blue color.
+6. The selected rows can be added to filtering. This moves the table visualization to a more detailed level (from example, from projects to tasks).
+7. The total number of selected rows and their hours is shown.
+8. The filtered work entries with all the four table visualization styles can be exported into an Excel file. The excel workbook contains four worksheets, one for each table visualization style.
 
 # Privacy Policy
 
@@ -399,6 +474,11 @@ Internal comments:
 Clockify styled work log and clocking for the day.
 
 # Change History
+
+## v7.0
+
+- Enter Hours: User can change the selected week for which to record work entries
+- Work entries returned from approval are updated periodically in the background
 
 ## v6.266
 - Bug fix: With Firefox copy button for task name was hidden behind a vertical scrollbar
