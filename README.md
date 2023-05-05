@@ -473,6 +473,15 @@ Clockify styled work log and clocking for the day.
 
 # Change History
 
+## v7.174
+
+ - Authentication is optimized in case the user has multiple Azure accounts; user no longer has to select the correct account
+ - Bug fix: Azure authentication could not be renewed automatically after an unsuccessful attempt when the computer had been locked or out of network
+ - Bug fix: Project tasks synchronization often resulted in "too many repeating requests" error, especially when the user had hundreds of projects availabl
+ - Enter Hours: Performance improvement in project tasks and recent work entry history synchronization (data is fetched from Workday API instead of using RPA)
+ - Enter Hours: Performance improvement in Calendar events synchronization (metadata for all events is fetched with a single call to calendar API)
+ - View My Hours: Performance improvements when browsing past weeks
+
 ## v7.0
 
 - Enter Hours: User can change the selected week for which to record work entries
