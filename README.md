@@ -450,7 +450,6 @@ It takes normal people 23 minutes to orientate yourself when switching from one 
 
 ## v7.x
 
-- Retrieve project tasks from Workday REST API instead of RPA to get the application to work for users with hundreds of projects
 - User can undo some changes (eg. work entry deletion)
 - Compatibility improvements for different Workday language etc. settings
 - Bug fix: If the user is fixed to a role on task level assignment the saving of work entries may fail
@@ -472,6 +471,14 @@ Internal comments:
 Clockify styled work log and clocking for the day.
 
 # Change History
+
+## v7.202
+
+ - Data Synchronization works a little quicker because Workday API token is kept in browser session storage
+ - Search can be cleared with a button in task selection dropdown
+ - Improved notifications shown to the user when hours have been changed in the Workday while the application has been open and modification of work entries fails
+ - Bug fix: Some users experienced errors when synchronizing the projects from Workday API
+ - Bug fix: Modifying entry sometimes resulted in error 
 
 ## v7.174
 
