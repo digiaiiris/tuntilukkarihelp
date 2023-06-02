@@ -316,6 +316,21 @@ There can be multiple returns from approval.
 
 Note that you need to submit the week's work entries to resolve the approval feedback completely. Otherwise, the feedback show up again when you reload the application.
 
+## Refreshing Project Tasks
+
+![Project refresh indicator screenshot](projecttaskrefresh.png)
+
+The application refreshes project tasks in the background after initialization.
+
+1. The progress of refreshing is indicated with the blue button. When spinning, refresh is in progress. Clicking the button opens up a dialog for manually refreshing the project tasks (see below).
+
+![Manually refreshing tasks screenshot](refreshtasksdialog.png)
+
+The project tasks can be refreshed manually. Manual refreshment bypasses all caches and fetches the project tasks from Workday.
+
+1. Project tasks are refreshed for a selected day. The tasks available may depend on the selected day because of the configured start and end dates of projects and worker resources.
+2. Clicking `Refresh now` button starts refreshing the tasks. The progress is indicated with a blue button as shown above.
+
 ## Calendar Event Notations to Enable Automatic Suggestions
 
 ![Calendar notation screenshot](calendarnotation.png)
@@ -471,6 +486,16 @@ Internal comments:
 Clockify styled work log and clocking for the day.
 
 # Change History
+
+## v7.223
+
+ - Bug fix: Setup screen did not show all supported browsers
+ - Bug fix: Background renewal of Azure authentication did not work and users needed to refresh page after it had stayed open for some hours
+ - Bug fix: Initialization did not work if the initialization page had stayed open for some hours before opening Workday window on another tab
+ - Bug fix: Initialization failed for some users who had visibility to hundreds of projects
+ - Background refreshing of the project tasks after initialization is indicated in the user interface
+ - The user can manually refresh the project tasks and select a weekday for which the available tasks are fetched
+ - Validation errors are shown in more detail when saving fails because of validation in Enter Time by Type screen
 
 ## v7.202
 
