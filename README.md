@@ -487,6 +487,13 @@ Clockify styled work log and clocking for the day.
 
 # Change History
 
+## v7.267
+ - Refactored Azure authentication flow to use authorization code instead of implicit grant flow, so that authentication will work also when browsers start denying 3rd party cookies.
+ - Bug fix: Initialization sometimes failed with `Invalid access token` or `Assertion is not within its valid time range` error
+ - Bug fix: There was a mystic error when the user switched to an old week that had been closed for editing
+ - Workday maintenance period is shown in a more user-friendly way
+ - Ask confirmation if the user wants to delete an entry which has hours on other than the selected weekday
+
 ## v7.223
 
  - Bug fix: Setup screen did not show all supported browsers
