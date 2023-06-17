@@ -487,6 +487,12 @@ Clockify styled work log and clocking for the day.
 
 # Change History
 
+## v7.293
+ - Bug fix: User could enter hours for a closed day if the week contained weekdays from a previous month that was closed
+ - Bug fix: Sometimes preliminary checks took a long time and resulted in 504 Gateway Timeout (because Azure profile picture fetching failed)
+ - Usability/visual improvements Go To current week button
+ - Notify the user to reload the page if the application is open on another browser window and work entries have been changed there
+
 ## v7.267
  - Refactored Azure authentication flow to use authorization code instead of implicit grant flow, so that authentication will work also when browsers start denying 3rd party cookies.
  - Bug fix: Initialization sometimes failed with `Invalid access token` or `Assertion is not within its valid time range` error
