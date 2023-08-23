@@ -487,9 +487,10 @@ Clockify styled work log and clocking for the day.
 
 # Change History
 
-## v7.310
+## v7.311
  - Bug fix: Description input text area did not behave well for long texts in Chrome and Edge because of their scrollbar changes (see [Chromium bug report](https://bugs.chromium.org/p/chromium/issues/detail?id=1472254))
  - Bug fix: Description input provided suggestions even though the description already matched a recent work entry
+ - Bug fix: Calendar events with zero duration were shown on every weekday as suggestions
  - Indicate to the user what to do if the project or task name has changed since data synchronization, causing work entry saving to fail
 
 ## v7.293
