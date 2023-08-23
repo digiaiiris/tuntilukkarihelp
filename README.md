@@ -487,6 +487,11 @@ Clockify styled work log and clocking for the day.
 
 # Change History
 
+## v7.310
+ - Bug fix: Description input text area did not behave well for long texts in Chrome and Edge because of their scrollbar changes (see [Chromium bug report](https://bugs.chromium.org/p/chromium/issues/detail?id=1472254))
+ - Bug fix: Description input provided suggestions even though the description already matched a recent work entry
+ - Indicate to the user what to do if the project or task name has changed since data synchronization, causing work entry saving to fail
+
 ## v7.293
  - Bug fix: User could enter hours for a closed day if the week contained weekdays from a previous month that was closed
  - Bug fix: Sometimes preliminary checks took a long time and resulted in 504 Gateway Timeout (because Azure profile picture fetching failed)
