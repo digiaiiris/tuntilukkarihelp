@@ -487,7 +487,7 @@ Clockify styled work log and clocking for the day.
 
 # Change History
 
-## v7.311
+## v7.312
  - Bug fix: Description input text area did not behave well for long texts in Chrome and Edge because of their scrollbar changes (see [Chromium bug report](https://bugs.chromium.org/p/chromium/issues/detail?id=1472254))
  - Bug fix: Description input provided suggestions even though the description already matched a recent work entry
  - Bug fix: Calendar events with zero duration were shown on every weekday as suggestions
