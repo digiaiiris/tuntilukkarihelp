@@ -118,7 +118,7 @@ If you are using Jira Cloud, the configuration view looks a bit different:
 
 ![Modules screenshot](modules.png)
 
-The application consists of different modules. The current module can be switched from the menu in the top-left corner.
+The application consists of different modules. The current module can be switched from the menu in the top bar.
 
  1. **Enter Hours** module allows you to record work entries, see its manual [below](#enter-hours-usage-and-features)
  2. **View My Hours** module allows you to search and visualize work entries of the past, see its manual [below](#view-my-hours-usage-and-features)
@@ -152,44 +152,27 @@ User settings can be accessed from the profile picture in the top-right corner o
 | Save changes to work entries automatically | When selected, changes to the work entries are automatically saved. When unselected, the user must save the changes manually using `Save` button (see [below](#saving-changes-manually)). |
 | Fetch also private calendar events | When selected, calendar events marked as private are also fetched and offered as suggestions for work entries of the day |
 | Select the current weekday by default | When selected, the current weekday is selected at application startup. When unselected, the hours of the entire week are shown. |
+| Always show Saturday and Sunday | When selected, Saturday and Sunday columns are shown always in the Enter Hours screen even if it's not weekend and even if there are not recorded work entries for the weekend. |
 | Hours input tick interval | Set the interval that is used in hour input control when using up or down buttons or keyboard arrows to increase or decrease the hours. |
 | Default role for new entries | The selected role is used as default for new work entries. If a project does not have the default role then the first available role is selected. |
 
 # Enter Hours: Usage and Features
 
-## Week Selection
+## Week Information
 
-![Week selection screenshot](weekselection.png)
+Information and actions concerning the week are as follows:
 
-In the top bar, the currently selected week is indicated and can be changed:
+ 1. Switch to the previous week.
+ 2. The currently selected week number is shown.
+ 3. Switch to the next week.
+ 4. Navigate to the current week (today).
+ 5. Weekdays and their dates are shown.
+ 6. Selected weekday is indicated with a yellow stripe. Only such entries and suggestions are shown which have hours on the selected weekday. You can be select another weekday by clicking the weekday caption. Clicking the currently selected weekday shows the hours of the entire week.
+ 7. Hour balance before the week
+ 8. Total number of hours entered for the weekdays.
+ 9. The current hour balance which is shown by `Time Off Balance` Wokday report. The balance takes into account only such weekdays that have work entries recorded for them ie. empty weekdays do not affect balance calculation.
 
- 1. You can navigate to the current week by clicking the icon.
- 2. Switch to the previous week.
- 3. The currently selected week (starting from Monday) is shown.
- 4. Switch to the next week.
- 
-Changing a week causes the page to reload and synchronize data again from Workday.
-
-## Hour Balances
-
-![Hour balances screenshot](hourbalances.png)
-
-In the top bar, three numbers are indicated concerning the hour balances:
-
- 1. Total number of hours entered so far for the week. This includes entries that are just being saved into Workday. Suggestions are not included.
- 2. Hour balance before the week, corresponding to the balance shown by `Time Off Balance` Wokday report
- 3. Current hour balance considering hour balance before the week, the required work hours and the total number of hours entered so far. The current balance considers only such weekdays that have work entries recorded for them.
-
-## Weekday Selection
-
-![Weekday selection screenshot](weekdayselection.png)
-
-Only such suggestions and week's entries are shown which have hours on the selected weekday.
-
-1. Selected weekday can be changed by clicking the weekday caption. Clicking the currently selected weekday shows the hours of the entire week.
-2. You can show Saturnday and Sunday by clicking `Show weekend`.
-
-By default, the current weekday is selected. You can change the behavior so that the entire week is shown by default. See settings [below](#user-settings).
+By default, the current weekday is selected when opening the application. You can change the behavior so that the entire week is shown by default. See settings [above](#user-settings).
 
 ## Suggestions
 
