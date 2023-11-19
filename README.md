@@ -12,19 +12,20 @@ Work entry recording is **description based**. In other words, you first tell wh
 
 There are multiple ways in which you're helped to record work entries efficiently:
 
- 1. **Events from your Outlook calendar** are provided as suggestions for work entries. If the events contain information about Workday project tasks (see details below) your only job is to accept the suggestions and you're done with them. 
- 2. **Recent Workday work entries** are used to auto-fill project tasks for calendar events even if the events themselves do not contain project task information. The most recent work entry with a similar description (event subject) yields the suggested project task.
- 3. **Auto-complete** feature and **magic wand** button allow you to select recent work entries as templates for the new work entries. If you have been doing the same things as last week, just click and enter the hours you spent for them today.
- 4. A powerful **search engine** makes it easy to find the correct project task using one or more terms (words or parts of words) that occur in the task name.
- 5. Work entries are **saved in the background** while you can continue entering new ones. No need to wait for anything.
- 6. The work entries are **submitted automatically** (if you don't change the setting to manual) so that you don't need to try remembering it.
- 7. You can **easily see and modify** all the entries you have recorded for the week.
- 8. The **hour balance** before the week is shown alongside with week's total hours and the resulting current balance.
- 9. The work entries that have been **returned from approval** are indicated clearly, preventing you from accidentally re-submitting the week without first taking action based on the feedback from the approval process.
+ 1. **Auto-complete** offers recent work entries based on the desription text. If you have been doing the same things as last week, just click and enter the hours you spent for them today.
+ 2. **Outlook calendar events** are provided as suggestions for work entries. If the events contain information about Workday project tasks you only need to accept the suggestions and you're done with them.
+ 3. **Jira activity** is used to provide suggestions for work entries. You can configure Jira integration to all the Jira instance you are working with. Jira integration works also the other way around: the work hours are logged back to Jira tickets.
+ 4. **Auto-filling** of project tasks looks up a similar work description from the work entry history to decide to suggest a proper task for a new entry.
+ 5. A powerful **search engine** makes it easy to find the correct project task using one or more terms (words or parts of words) that occur in the task name.
+ 6. Work entries are **saved in the background** while you can continue entering new ones. No need to wait for anything.
+ 7. The work entries are **submitted automatically** (if you don't change the setting to manual) so that you don't need to try remembering it.
+ 8. You can **easily see and modify** all the entries you have recorded for the week.
+ 9. The **hour balance** before the week is shown alongside with week's total hours and the resulting current balance.
+ 10. The work entries that have been **returned from approval** are indicated clearly, preventing you from accidentally re-submitting the week without first taking action based on the feedback from the approval process.
 
 There are some things that you cannot do with this application. So, in order to record the following entries you must go to Workday:
  1. Vacations and other absences
- 2. Work entries titled to separately approved compensation
+ 2. Work entries entitled to separately approved compensation
  3. Overtime work entries
 
 # Glossary of Important Terms
@@ -52,7 +53,7 @@ Currently, only Edge, Chrome, Chromium and Firefox browsers are supported.
 
 You will be prompted to authenticate using corporate credentials. Authentication allows the application to access your calendar and make work entry suggestions based on the week's events.
 
-1. Click the login button to be redirected to Microsoft authentication used by your company.
+Click the login button to be redirected to Microsoft authentication used by your company.
 
 ## Setup Process
 
@@ -63,13 +64,55 @@ The user interface guides you through the initial setup process.
 During the setup process, you will be instructed to activate a browser extension. The browser extension enables RPA (Robotic Process Automation)
 techonology which performs operations in Workday user interface in an automated and efficient fashion on your behalf.
 
-## Workday Window
+## Opening Workday Window
 
 Workday must be opened on another window/tab of the browser. Actually, it is enough to just briefly open Workday and then close it. That enables Tuntilukkari to use Workday's user session to access Workday APIs.
 
 The application will prompt you if the Workday session is going to expire and you need to open Workday again on another window.
 
 To automate Workday window opening, please allow popups for the page in the browser.
+
+## Configuring Jira Integration
+
+As part of the application setup, you can configure a Jira integration. Later, you can add or modify Jira integrations in user settings.
+
+### Phase 1
+
+![Jira configuration scheenshot phase 1](jiraconfig1.png)
+
+1. Enter the Jira domain you are using (you can just copy-paste your Jira address)
+2. Click `Check domain` button to verify that the Jira instance is compatible with this application
+3. Click `Next` to move on to the next configuration phase
+
+### Phase 2
+
+![Jira configuration scheenshot phase 2](jiraconfig2.png)
+
+The application needs an access token to access Jira API on your behalf.
+
+1. Click the link to open your Jira settings. From there, click `Create token` and follow the instructions below.
+2. Copy-paste the token you created here.
+3. Click `Test token` button to verify that the token works.
+4. Click `Next` to move on to the next configuration phase
+
+#### Configuration of Access Token in Jira
+
+![Jira configuration scheenshot token of Jira on-premise](jiraconfigtoken.png)
+
+1. Give the token a name so that you recognize later what the token is for.
+2. Decide on the expiry date. Note that you need to re-configure the token each time it expires.
+
+If you are using Jira Cloud, the configuration view looks a bit different:
+
+![Jira configuration scheenshot token of Jira Cloud](jiraconfigapitoken.png)
+
+### Phase 3
+
+![Jira configuration scheenshot phase 3](jiraconfig3.png)
+
+1. Select if you want that the work entry hours are sent back to Jira ticket worklogs. Generally, it is a good practice so that everyone can follow the amount of work put to Jira tickets almost real-time (depending on how often you record work hours).
+2. Does your team use a Jira field to indicate the project task for work entry recording? If you select a field the application tries to deduce the correct project task based on the field's value.
+3. Click `Next` to complete the configuration.
 
 # Module Selection and General Usage
 
