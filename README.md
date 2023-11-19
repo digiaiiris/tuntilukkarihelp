@@ -172,6 +172,24 @@ Configuring Jira integration is explained in more detail [above](#configuring-ji
 
 # Enter Hours: Usage and Features
 
+## Week Information
+
+![Week information screenshot](weekheaders.png)
+
+Information and actions concerning the week are as follows:
+
+ 1. Switch to the previous week.
+ 2. The currently selected week number is shown.
+ 3. Switch to the next week.
+ 4. Navigate to the current week (today).
+ 5. Weekdays and their dates are shown.
+ 6. Selected weekday is indicated with a yellow stripe. Only such entries and suggestions are shown which have hours on the selected weekday. You can be select another weekday by clicking the weekday caption. Clicking the currently selected weekday shows the hours of the entire week.
+ 7. Hour balance before the week
+ 8. Total number of hours entered for the weekdays.
+ 9. The current hour balance which is shown by `Time Off Balance` Wokday report. The balance takes into account only such weekdays that have work entries recorded for them ie. empty weekdays do not affect balance calculation.
+
+By default, the current weekday is selected when opening the application. You can change the behavior so that the entire week is shown by default. See settings [above](#user-settings).
+
 ## Entering New Work Entry
 
 ![Enter new entry screenshot](enternewentry.png)
@@ -208,23 +226,56 @@ Selecting an an auto-complete suggestion completes the work description and sele
 
 > Pro tip 2: Pressing `Enter` in hours field after selecting the auto-complete suggestion and entering hours saves the new entry.
 
-## Week Information
+## Project Task Selection
 
-![Week information screenshot](weekheaders.png)
+![Project task selection screenshot](projecttaskselection.png)
 
-Information and actions concerning the week are as follows:
+Project task is selected from a dropdown menu that shows all the available project tasks.
 
- 1. Switch to the previous week.
- 2. The currently selected week number is shown.
- 3. Switch to the next week.
- 4. Navigate to the current week (today).
- 5. Weekdays and their dates are shown.
- 6. Selected weekday is indicated with a yellow stripe. Only such entries and suggestions are shown which have hours on the selected weekday. You can be select another weekday by clicking the weekday caption. Clicking the currently selected weekday shows the hours of the entire week.
- 7. Hour balance before the week
- 8. Total number of hours entered for the weekdays.
- 9. The current hour balance which is shown by `Time Off Balance` Wokday report. The balance takes into account only such weekdays that have work entries recorded for them ie. empty weekdays do not affect balance calculation.
+ 1. You can search project tasks using one or more terms (words or parts of words) that occur in the project task name.
+ 2. You can clear the search with `X` button
+ 3. The number of project tasks matching the search is shown.
+ 4. Project tasks are refreshed from Workday once a day. The last refresh time is shown.
+ 5. You can manually refresh the task list if project tasks do not appear in the list (see [below](#refreshing-project-tasks)).
+ 6. Recently used project tasks are shown first in the list.
+ 7. After the recent tasks, also other available tasks matching the search are shown.
+ 8. Project task name can be copied to clipboard.
 
-By default, the current weekday is selected when opening the application. You can change the behavior so that the entire week is shown by default. See settings [above](#user-settings).
+> Pro tip: You can move from the search field to the list by hitting `Tab`. Then, you can use arrow keys to navigate and `Enter` to select the item in the list.
+
+> Pro tip 2: Pressing `Enter` in project task button after selecting the task saves the new entry.
+
+## Refreshing Project Tasks
+
+The application refreshes project tasks in the background once a day. The tasks can be refreshed manually from the project task selection menu.
+
+![Manually refreshing tasks screenshot](refreshtasksdialog.png)
+
+1. Project tasks are refreshed for a selected day. The tasks available may depend on the selected day because of the configured start and end dates of projects and worker resources.
+2. Clicking `Refresh now` button starts refreshing the tasks. The progress is indicated with the blue refresh button in the project task selection menu.
+
+## The Week's Work Entries
+
+![The week's entries screenshot](todaysentries.png)
+
+The work entries that are so far entered for the week are shown in a table.
+
+ 1. You can change the work description.
+ 2. Long description texts are indicated with an ellipsis (…)
+ 3. You can change the hours for each weekday.
+ 4. You can change the project task selection.
+ 5. You can change the role for such projects where you have been assigned to more than one role. The selected role is shown with its initial letters.
+ 6. You can duplicate the work entry to enter another one. Duplicating copies the hours and project task of the original one to the new entry, leaving for you to write the work description.
+ 7. You can delete the work entry.
+ 8. The work entry state can be one of the following:
+	- `Draft` not all the fields are filled up
+	- `Saving` the fields have changed and saving is in progress
+	- `Deleting` the used has deleted the entry and deletion is in progress
+	- `Saved` all the changes have been saved successfully
+	- `Error` there was an error saving or deleting the entry; the error text is shown in detail and you can try saving the entry again by modifying some of the fields
+
+The changes you make to week's entries are saved either automatically or manually depending on the user setting (see [above](#user-settings)). Once the saving has started, it proceeds in the background.
+You can freely continue making modifications to work entries even though there are savings in progress. The application makes sure that all the modifications are taken into account.
 
 ## Suggestions
 
@@ -257,44 +308,6 @@ Note that you don't need to apply all the suggestions. Usually, there are such e
 BTW, private calendar events are automatically filtered out from the suggestions.
 
 > Pro tip: Ignore such calendar event series that are not recorded as work entries; such as time spent on daily scrum meetings that will be recorded to the actual tasks at hand.
-
-## Project Task Selection
-
-![Project task selection screenshot](projecttaskselection.png)
-
-Project task is selected from a dropdown that shows all the available project tasks.
-
- 1. The project task name parsed from the calendar event (if such was found) is shown at the top of the list in a gray color as a hint for selecting the correct task.
- 2. You can search project tasks using one or more terms (words or parts of words) that occur in the recent activity. For example, "Design act" matches "PROJ-123 **Design** a new way for users to inter**act** with calibration management".
- 3. Project task is selected from the dropdown list.
- 4. Project task name can be copied to clipboard.
-
-> Pro tip: You can move from the search field to the list by hitting `Tab`. Then, you can use arrow keys to navigate and `Enter` to select the item in the list.
-
-> Pro tip 2: Pressing `Enter` in project task dropdown after selecting the task saves the new entry.
-
-## The Week's Work Entries
-
-![The week's entries screenshot](todaysentries.png)
-
-The work entries that are so far entered for the week are shown in a table.
-
- 1. You can change the work description.
- 2. Long description texts are indicated with an ellipsis (…)
- 3. You can change the hours for each weekday.
- 4. You can change the project task selection.
- 5. You can change the role for such projects where you have been assigned to more than one role. The selected role is shown with its initial letters.
- 6. You can duplicate the work entry to enter another one. Duplicating copies the hours and project task of the original one to the new entry, leaving for you to write the work description.
- 7. You can delete the work entry.
- 8. The work entry state can be one of the following:
-	- `Draft` not all the fields are filled up
-	- `Saving` the fields have changed and saving is in progress
-	- `Deleting` the used has deleted the entry and deletion is in progress
-	- `Saved` all the changes have been saved successfully
-	- `Error` there was an error saving or deleting the entry; the error text is shown in detail and you can try saving the entry again by modifying some of the fields
-
-The changes you make to week's entries are saved either automatically or manually depending on the user setting (see [above](#user-settings)). Once the saving has started, it proceeds in the background.
-You can freely continue making modifications to work entries even though there are savings in progress. The application makes sure that all the modifications are taken into account.
 
 ### Saving Changes Manually
 
@@ -348,21 +361,6 @@ There can be multiple returns from approval.
 5. Once you have made the corrections to the returned work entries, mark the feedback as resolved. Only then you can submit the work entries of the week.
 
 Note that you need to submit the week's work entries to resolve the approval feedback completely. Otherwise, the feedback show up again when you reload the application.
-
-## Refreshing Project Tasks
-
-![Project refresh indicator screenshot](projecttaskrefresh.png)
-
-The application refreshes project tasks in the background after initialization.
-
-1. The progress of refreshing is indicated with the blue button. When spinning, refresh is in progress. Clicking the button opens up a dialog for manually refreshing the project tasks (see below).
-
-![Manually refreshing tasks screenshot](refreshtasksdialog.png)
-
-The project tasks can be refreshed manually. Manual refreshment bypasses all caches and fetches the project tasks from Workday.
-
-1. Project tasks are refreshed for a selected day. The tasks available may depend on the selected day because of the configured start and end dates of projects and worker resources.
-2. Clicking `Refresh now` button starts refreshing the tasks. The progress is indicated with a blue button as shown above.
 
 ## Calendar Event Notations to Enable Automatic Suggestions
 
