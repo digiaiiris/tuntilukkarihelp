@@ -146,6 +146,8 @@ User menu can be accessed from the profile picture in the top-right corner of th
 
 User settings can be accessed from the profile picture in the top-right corner of the page -> `Settings`.
 
+### Enter Hours Module Settings
+
 | Setting | Description |
 | ------- | ----------- |
 | Submit work entries automatically | When selected, the work entries entered by the user are automatically submitted for approval after saving. Note that you can still modify the work entries even if they have been submitted. When unselected, the user must submit the work entries manually using `Submit` button (see [below](#submitting-work-entries-for-approval)). |
@@ -156,9 +158,59 @@ User settings can be accessed from the profile picture in the top-right corner o
 | Hours input tick interval | Set the interval that is used in hour input control when using up or down buttons or keyboard arrows to increase or decrease the hours. |
 | Default role for new entries | The selected role is used as default for new work entries. If a project does not have the default role then the first available role is selected. |
 
+### Jira Integration Settings
+
+![Jira integration screenshot](jiraintegration.png)
+
+ 1. The table shows all the configured Jira instances and their connection status.
+ 2. You can edit a Jira instance configuration, eg. if you need to update the access token.
+ 3. You can delete a Jira integration.
+ 4. You can add a new Jira integration. There is no limit as to how many Jira instances are configured.
+ 5. Remember to save changes when you're done.
+
+Configuring Jira integration is explained in more detail [above](#configuring-jira-integration).
+
 # Enter Hours: Usage and Features
 
+## Entering New Work Entry
+
+![Enter new entry screenshot](enternewentry.png)
+
+You can enter new work entries manually if the suggestions (see [below](#suggestions)) do not cover all the week's activities.
+
+1. Type in the description of what you've been doing. The description will usually be printed in the invoice details sent to the customer. Often this is the same as a ticket number (eg. in Jira) or a subject of a calendar event that you have attended to.
+> Note that you can enter long and multiline text into the description field. After entering a long text, the text input will collapse and you will be indicated by an ellipsis (…) that some part of the text is not visible.
+2. Number of hours you've been working on the subject for each weekday.
+3. You can select the project task from a dropdown. See [below](#project-task-selection) for more details.
+4. You can select the role from a dropdown in case you have multiple roles assigned in the project. By default, the first role or the default role set in [user settings](#user-settings) is selected.
+5. You can save the new work entry by clicking `Save` button. The entry moves to the week's work entries where you can still modify it. 
+6. You can reset new work entry fields to empty values
+
+> Pro tip: You can use `Tab` and `Shift+Tab` to move between fields quickly.
+
+> Pro tip 2: You can start typing (ie. searching) project task name immediately after moving focus to the dropdown button with `Tab`. You can also press `Space` to open the task list.
+
+One word of caution: If you usually find yourself typing in the description, hours, and project task selection manually you should probably adopt other features such as auto-completion or suggestions. Also, you could try to change your whole way of organizing the time at work (see further thoughts about it [below](#tips-for-managing-your-time-entries-at-work)).
+
+## Work Description Field Auto-Complete
+
+![Auto-complete screenshot](autocomplete.png)
+
+Work description field offers auto-complete suggestions based on the recent work entry history. Picking up an auto-complete suggestion also selects the project task that has been recently used for that work description.
+
+1. If the entered work description matches with a Jira ticket number the Jira ticket summary is shown as the first auto-complete suggestions.
+2. Recent work entries (from the last 10 weeks) matching the entered description are shown next.
+3. Project tasks of the recent entries are offered automatically. In the case of a Jira ticket, the project task is looked up from the configured project task field.
+
+Selecting an an auto-complete suggestion completes the work description and selects the suggested project task, allowing you to type in the hours next.
+
+> Pro tip: You can use 'Arrow Down' key to move from the description field to the auto-complete list.
+
+> Pro tip 2: Pressing `Enter` in hours field after selecting the auto-complete suggestion and entering hours saves the new entry.
+
 ## Week Information
+
+![Week information screenshot](weekheaders.png)
 
 Information and actions concerning the week are as follows:
 
@@ -205,51 +257,6 @@ Note that you don't need to apply all the suggestions. Usually, there are such e
 BTW, private calendar events are automatically filtered out from the suggestions.
 
 > Pro tip: Ignore such calendar event series that are not recorded as work entries; such as time spent on daily scrum meetings that will be recorded to the actual tasks at hand.
-
-## Entering New Work Entry
-
-![Enter new entry screenshot](enternewentry.png)
-
-With this functionality, you can enter new work entries manually if the suggestions (see above) do not cover all the week's activities.
-
-1. Magic wand button opens a dialog where you can select recent activity as a tempate for the new work entry (see [below](#magic-wand-dialog-using-recent-activity-as-template) for more details).
-2. You can type in the description if you don't use the magic wand button to fill it.
-> Note that you can enter long and multiline text into the description field. After entering a long text, the text input will collapse and you will be indicated by an ellipsis (…) that some part of the text is not visible.
-3. Number of hours you've been working on the subject for each weekday. The hours can be entered in 0.5 hours (30 minutes) precision.
-4. You can select the project task from a dropdown (see [below](#project-task-selection) for more details) if you don't use the magic wand button to fill it.
-5. You can select the role from a dropdown in case you have multiple roles assigned in the project. By default, the first role or the default role set in [user settings](#user-settings) is selected.
-6. You can reset new work entry fields to empty values
-7. State can be one of the following:
-	- `Incomplete` not all the fields are filled up
-	- `Complete` entry is ready to be saved
-8. You can save the new work entry by clicking `Save` button. The entry moves to the week's work entries where you can still modify it. 
-
-> Pro tip: You can use `Tab` and `Shift+Tab` to move between fields quickly.
-
-> Pro tip 2: You can start typing (ie. searching) project task name immediately after moving focus to the dropdown button with `Tab`. You can also press `Space` to open the task list.
-
-One word of caution: If you usually find yourself typing in the description, hours, and project task selection manually you should probably adopt other features such as magic wand button or auto-completion. Also, you could try to change your whole way of organizing the time at work (see further thoughts about it [below](#tips-for-managing-your-time-entries-at-work)).
-
-## Work Description Field Auto-Complete
-
-![Auto-complete screenshot](autocomplete.png)
-
-Work description field offers auto-complete suggestions based on the recent work entry history. Picking up an auto-complete suggestion also selects the project task that has been recently used for that work description.
-
-1. Click an auto-complete suggestion to go with that description. Hovering a mouse over an auto-complete suggestions shows the project task what will be selected when the suggestions is clicked.
-
-> Pro tip: You can use 'Arrow Down' key to move from description field to the auto-complete list.
-
-## Magic Wand Dialog (Using Recent Activity as Template)
-
-![Magic wand dialog screenshot](magicwanddialog.png)
-
-The dialog shows recent activity that can be selected as a template for the new work entry.
-
- 1. You can search recent activity using one or more terms (words or parts of words) that occur in the recent activity. For example, "Design act" matches "PROJ-123 **Design** a new way for users to inter**act** with calibration management".
- 2. Work entries for the last 10 weeks are shown here. The list shows their work descriptions. A tooltip for each entry shows the latest entry date and the project task used. Selecting a recent work entry preselects work description and project tasks fields, allowing you to type in the hours.
-
-> Pro tip: Pressing `Enter` in hours field after selecting the template and entering hours saves the new entry.
 
 ## Project Task Selection
 
