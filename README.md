@@ -111,7 +111,7 @@ If you are using Jira Cloud, the configuration view looks a bit different:
 ![Jira configuration scheenshot phase 3](jiraconfig3.png)
 
 1. Select if you want that the work entry hours are sent back to Jira ticket worklogs. Generally, it is a good practice so that everyone can follow the amount of work put to Jira tickets almost real-time (depending on how often you record work hours).
-2. Does your team use a Jira field to indicate the project task for work entry recording? If you select a field the application tries to deduce the correct project task based on the field's value.
+2. Does your team use a custom Jira field to indicate the project task for work entry recording? The application deducse the correct project task based on the field's value. In case Jira-Workday integration is used its fields are used automatically and you do not need to select anything here.
 3. Click `Next` to complete the configuration.
 
 # Module Selection and General Usage
@@ -256,7 +256,7 @@ The application refreshes project tasks in the background once a day. The tasks 
 
 ## The Week's Work Entries
 
-![The week's entries screenshot](todaysentries.png)
+![The week's entries screenshot](weeksentries.png)
 
 The work entries that are so far entered for the week are shown in a table.
 
@@ -265,14 +265,8 @@ The work entries that are so far entered for the week are shown in a table.
  3. You can change the hours for each weekday.
  4. You can change the project task selection.
  5. You can change the role for such projects where you have been assigned to more than one role. The selected role is shown with its initial letters.
- 6. You can duplicate the work entry to enter another one. Duplicating copies the hours and project task of the original one to the new entry, leaving for you to write the work description.
- 7. You can delete the work entry.
- 8. The work entry state can be one of the following:
-	- `Draft` not all the fields are filled up
-	- `Saving` the fields have changed and saving is in progress
-	- `Deleting` the used has deleted the entry and deletion is in progress
-	- `Saved` all the changes have been saved successfully
-	- `Error` there was an error saving or deleting the entry; the error text is shown in detail and you can try saving the entry again by modifying some of the fields
+ 6. You can save the changes to Workday.
+ 7. You can duplicate or delete the work entry. Duplicating copies the hours and project task of the original one to the new entry, leaving for you to write the work description.
 
 The changes you make to week's entries are saved either automatically or manually depending on the user setting (see [above](#user-settings)). Once the saving has started, it proceeds in the background.
 You can freely continue making modifications to work entries even though there are savings in progress. The application makes sure that all the modifications are taken into account.
