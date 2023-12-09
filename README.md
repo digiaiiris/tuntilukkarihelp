@@ -275,40 +275,25 @@ You can freely continue making modifications to work entries even though there a
 
 ![Suggestions screenshot](suggestions.png)
 
-The application automatically makes suggestions of week's work entries based on Outlook calendar events.
+The application automatically makes suggestions of week's work entries based on Outlook calendar events and Jira activity.
 
-Suggestions can also be ignored. Ignored suggestions are shown in a separate collapsible list. If you ignore a calendar event series the event occurrences will show up as ignored suggestions also in the future.
-
-1. You can apply apply all the complete and autofilled suggestions by clicking `Apply all` button.
-2. Icon shows the source of the suggestion. Clicking the icon shows calendar event details.
-3. The suggested work description is either the event subject or parsed from the event text (see [below](#calendar-event-notations-to-enable-automatic-suggestions)).
-4. The suggested hours are taken from the event durations.
-5. The suggested project task is based on the event text (see [below](#calendar-event-notations-to-enable-automatic-suggestions)). If the event does not specify the project task, the application suggests project task using the recent work entry history, searching for a work description that matches the event subject.
+1. You can select suggestions to be shown. Ignored suggestions are shown on a separate tab. Clicking the refresh icon sychronizes the suggestions again with calendar or Jira.
+2. Clicking the icon shows the details of the calendar event or Jira ticket in concern.
+3. The work description for calendar events is either the event subject or parsed from the event text (see [below](#calendar-event-notations-to-enable-automatic-suggestions)).
+4. The hours are taken from the event durations. Jira activity duration is estimated based on the activity timestamps. The hours may not represent the actual hours and must be checked before adding the suggestion.
+5. The project task is based on the calendar event text (see [below](#calendar-event-notations-to-enable-automatic-suggestions)) or the configured Jira ticket field. If the event or Jira ticket does not specify the project task the application suggests project task using the recent work entry history, searching for a work description that matches the event subject.
 6. You can select the role from a dropdown in case you have multiple roles assigned in the project. By default, the first role or the default role set in [user settings](#user-settings) is selected.
-7. Possible warnings are indicated with an icon with a tooltip describing the warning in more detail.
+7. You can add the suggestion as a work entry by clicking `Add` button. The added entry moves to week's work entries where you can still modify it. If the button has `+` symbol it means there is already an existing work entry that will be added hours to.
+8. Suggestions can be ignored. Ignored suggestions move to a separate tab.
+
+Possible warnings are indicated with an icon with a tooltip describing the warning in more detail.
  > The application warns if project task matching accuracy was low, ie. if the project task specified in the event does not match with available project tasks with high accuracy.
 
 > Also, the application warns if the project task parsed from the event does not match the project task used the last time in recent work entry history with a similar work description.
-8. Suggestions can be ignored meaning that they will disppear from suggestions list. Ignoring calendar event series will cause the future event occurences be ignored automatically.
-9. Suggestion state can be one of the following:
-	- `Incomplete` not all the fields are filled up
-	- `Complete` there are user-made changes and the suggestion can be applied
-	- `Autofilled` automatic suggestion can be applied as such
-10. You can apply the suggestion by clicking `Apply` button. The applied entry moves to week's work entries where you can still modify it.
-11. You can review the ignored suggestions by clicking `Ignored suggestions` list. Ignored suggestions can be restored back to suggestions or applied as work entries.
 
-Note that you don't need to apply all the suggestions. Usually, there are such events in your calendar that are irrelevant to the work entry recording. You can either ignore those irrelevant events by clicking ignore icon or just leave them be.
+Note that you don't need to apply all the suggestions. Usually, there are such events in your calendar that are irrelevant to work entry recording. You can either ignore those irrelevant events by clicking ignore icon or just leave them be.
 
-BTW, private calendar events are automatically filtered out from the suggestions.
-
-> Pro tip: Ignore such calendar event series that are not recorded as work entries; such as time spent on daily scrum meetings that will be recorded to the actual tasks at hand.
-
-### Saving Changes Manually
-
-These buttons appear only if you have opted for saving changes to work entries manually in user settings (see [above](#user-settings)).
-
- 9. You can save the changes to the work entry in question.
- 10. You can discard the changes, restoring the work entry fields to their previously saved values.
+BTW, private calendar events are automatically filtered out from the suggestions. You can customize this behavior in [user settings](#user-settings).
 
 ## Adding Hours to an Existing Work Entry
 
@@ -317,9 +302,9 @@ These buttons appear only if you have opted for saving changes to work entries m
 When recording new hours to a work entry that already exists on the current week, the hours will be added to the current entry.
 
  1. The existing entry with an identical description and project task is indicated with a green background when the new entry is being edited.
- 2. Save button has `+` indicating that the hours will be added to an existing item instead of creating a new one.
+ 2. Save button has `+` symbol indicating that the hours will be added to an existing item instead of creating a new one.
 
-> Pro tip: You can add hours to existing entries in multiple ways. Either editing the hours in the week's work entries, adding a new one with identical description and project task, using auto-complete or magic wand button to choose an existing entry, or applying a suggestion that is similar to an existing entry. Take whichever you like best
+> Pro tip: You can add hours to existing entries in multiple ways. Either editing the hours in the week's work entries, adding a new one with identical description and project task, using auto-complete in description field, or applying a suggestion that is similar to an existing entry. Take whichever you like best.
 
 ## Submitting Work Entries for Approval
 
@@ -327,13 +312,7 @@ When recording new hours to a work entry that already exists on the current week
 
 The saved work entries can be submitted either automatically or manually (see setting [above](#user-settings)).
 
-1. Submit status can be one of the following:
-   - `Entries can be submitted` the saved work entries need to be submitted manually
-   - `Submitting` the work entries are being submitted (either automatically or because the user has submitted them)
-   - `Submitting after other operations have completed` the user has changed work entries and their saving is in progress; submit will happen after saving has finished
-   - `All entries have been submitted` today's work entries have been submitted for approval
-   - `Unsubmitted entries from this week` when opening up the application there have been unsubmitted work entries; you can submit them manually
-2. You can submit all the work entries. Note that this submits hours of all the weekdays of the week regardless of the weekday selection.
+1. You can submit all the work entries. Note that this submits hours of all the weekdays of the week regardless of the weekday selection.
 
 ## Work Entries Returned from Approval
 
@@ -488,29 +467,36 @@ It takes normal people 23 minutes to orientate yourself when switching from one 
 
 # Development Roadmap
 
-## v7.x
-
-- User can undo some changes (eg. work entry deletion)
-- Compatibility improvements for different Workday language etc. settings
-- Bug fix: If the user is fixed to a role on task level assignment the saving of work entries may fail
-
-## v8
-
-Jira integration:
-- The user can configure unlimited Jira instances to integrate with
-- Magic wand dialog shows recent Jira tickets based on Jira activity (eg. the user has commented on a ticket)
-- Jira time tracking: time tracking marked in Jira tickets is shown up as a suggestion
-- Jira time tracking: work entry hours are recorded as time tracking in Jira tickets
-- Project task is taken from Jira ticket or its epic link
-
 ## v9
 
-Internal comments:
-- Work entries have internal comment fields that are shown only to project manager at approval and not printed in the customer invoice
-
-Clockify styled work log and clocking for the day.
+- Show holidays
+- Manager's playground: Managers can approve hours and set their billing status
+- Compatibility improvements for different Workday language etc. settings
+- Bug fix: If the user is fixed to a role on task level assignment the saving of work entries may fail
+- Clockify styled work log clocking for the current day.
 
 # Change History
+
+## v8.73
+ - Jira integration: Detection and co-operation with Jira-Workday integration plugin
+ - Bug fix: Jira integration did not work properly for users with capital letters in email address
+ - Bug fix: Modifying work entries sometimes failed when there were more than 30 work entries on the week
+ - Bug fix: Deleting a work entry row failed sometimes
+ - Bug fix: Workday session initialization failed sometimes
+ - Bug fix: Sometimes a clicked work entry row disappeared from view
+ - Usability fix: Disabled project task expanding with hover because it covered buttons such as `Add`
+
+## v8.0
+ - New UX design
+ - Jira integration: The user can configure unlimited Jira instances to integrate with
+ - Jira integration: Recording hours to Jira's worklog
+ - Jira integration: Providing auto-completion based on Jira ticket number
+ - Jira integration: Providing suggestions based on Jira activity
+ - View My Hours shows hour balance development over time
+ - Calendar events can be refreshed
+ - Work entry deletion can be undone while deletion is still in progress
+ - Performance and stability improvements
+ - New user setting: Always show Saturday and Sunday
 
 ## v7.312
  - Bug fix: Description input text area did not behave well for long texts in Chrome and Edge because of their scrollbar changes (see [Chromium bug report](https://bugs.chromium.org/p/chromium/issues/detail?id=1472254))
