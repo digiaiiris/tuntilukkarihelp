@@ -327,13 +327,11 @@ Hours cannot be submitted if there are work entries that have been returned from
 
 There can be multiple returns from approval.
 
-1. Feedback can be selected by clicking it
-2. The work entries related to the returned submit are highlighted with a red frame in the week's work entries. Note that Workday does not allow focusing the feedback on specific hours. Instead, all the hours submitted at the same time are highlighted and the feedback helps you to decided what corrections need to be done to the entries.
-3. Feedback shows all the major events of the approval process, including the submitting of the work entries and their sending back, along with a comment from the project manager.
-4. Feedback status can be `Unresolved` or `Resolved`.
-5. Once you have made the corrections to the returned work entries, mark the feedback as resolved. Only then you can submit the work entries of the week.
+1. Feedback shows all the major events of the approval process, including the send back reason from the project manager.
+2. The work entries related to the returned submit are highlighted with a red frame in the week's work entries. Note that Workday does not allow relating the feedback on specific hours. Instead, all the hours submitted at the same time are highlighted and the feedback helps you to decided what corrections need to be done to the entries.
+3. Once you have made the corrections to the returned work entries, mark the feedback as resolved. Only then you can submit the work entries of the week.
 
-Note that you need to submit the week's work entries to resolve the approval feedback completely. Otherwise, the feedback show up again when you reload the application.
+Note that you need to submit the week's work entries to resolve the approval feedback completely. Otherwise, the feedback shows up again when you reload the application.
 
 ## Calendar Event Notations to Enable Automatic Suggestions
 
